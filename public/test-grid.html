@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grid Test</title>
+    <style>
+        .test-grid {
+            display: grid !important;
+            grid-template-columns: 1fr 1fr !important;
+            grid-gap: 30px !important;
+            width: 100% !important;
+            margin: 20px 0 !important;
+            padding: 20px !important;
+            border: 2px solid red;
+        }
+        
+        .test-card {
+            background: #333 !important;
+            color: white !important;
+            padding: 20px !important;
+            border: 2px solid blue;
+            min-height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Grid Layout Test</h1>
+    
+    <div class="test-grid">
+        <div class="test-card">Card 1 - Should be on left</div>
+        <div class="test-card">Card 2 - Should be on right</div>
+        <div class="test-card">Card 3 - Should be below left</div>
+        <div class="test-card">Card 4 - Should be below right</div>
+    </div>
+    
+</body>
+</html>

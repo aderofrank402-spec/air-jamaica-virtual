@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>SimBrief Debug Poster</title>
+  <style>body{font-family:Arial,Helvetica,sans-serif;margin:20px}label{display:block;margin-top:8px}textarea,input,select{width:100%;box-sizing:border-box;padding:8px}</style>
+</head>
+<body>
+  <h2>SimBrief Debug Poster</h2>
+  <p>Use this page to POST your exact SimBrief payload to the chosen endpoint. The request will be forwarded server-side (no CORS) and the full response will be shown.</p>
+
+  <form method="post" action="/simbrief_proxy.php" target="_self">
+    <label>Endpoint URL</label>
+    <select name="endpoint">
+      <option value="https://dispatch.simbrief.com/api/xml.prefile.php">https://dispatch.simbrief.com/api/xml.prefile.php</option>
+      <option value="https://www.simbrief.com/api/xml.prefile.php">https://www.simbrief.com/api/xml.prefile.php</option>
+      <option value="http://www.simbrief.com/api/xml.prefile.php">http://www.simbrief.com/api/xml.prefile.php</option>
+    </select>
+
+    <label>Raw POST body (application/x-www-form-urlencoded). Example: <code>api_req=...&amp;api_code=...</code></label>
+    <textarea name="raw_body" rows="6" placeholder="api_req=...&amp;api_code=..."></textarea>
+
+    <p style="margin:10px 0">Or enter individual form fields below (they will be merged with raw_body where provided):</p>
+    <label>api_req</label>
+    <input type="text" name="api_req">
+    <label>api_code</label>
+    <input type="text" name="api_code">
+    <label>static_id (optional)</label>
+    <input type="text" name="static_id">
+
+    <div style="margin-top:12px">
+      <button type="submit">Send Request</button>
+    </div>
+  </form>
+
+  <p>After submitting you will see the HTTP status, response headers and body. Copy/paste the output here if you want me to analyze it.</p>
+</body>
+</html>

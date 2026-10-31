@@ -1,0 +1,175 @@
+@import '../../../../vendor/filament/filament/resources/css/theme.css';
+
+@source '../../../../app/Filament/**/*';
+@source '../../../../resources/views/filament/**/*';
+
+/* Air Jamaica Virtual Admin Panel Customizations */
+:root {
+    --jamaica-green: #00A651;
+    --jamaica-yellow: #FED100;
+    --jamaica-black: #000000;
+    font-size: 16px; /* Base font size */
+}
+
+/* Brand logo styling */
+[data-fi-topbar-brand] {
+    display: flex !important;
+    align-items: center !important;
+    gap: 0.75rem !important;
+}
+
+[data-fi-topbar-brand] img {
+    height: 2.5rem !important;
+    width: auto !important;
+    object-fit: contain !important;
+}
+
+/* Brand text styling */
+[data-fi-topbar-brand] span {
+    font-weight: 700 !important;
+    font-size: 1.125rem !important;
+    color: var(--jamaica-green) !important;
+}
+
+/* Responsive brand text */
+@media (max-width: 1024px) {
+    [data-fi-topbar-brand] span {
+        display: none !important;
+    }
+}
+
+/* Sidebar header styling */
+.fi-sidebar-header,
+[data-fi-sidebar-header] {
+    padding: 1rem !important;
+}
+
+.fi-sidebar-header img,
+[data-fi-sidebar-header] img {
+    max-height: 2.5rem !important;
+    width: auto !important;
+    object-fit: contain !important;
+}
+
+/* NASA-Level Dashboard Visual Depth */
+.fi-main {
+    background-image: 
+        radial-gradient(circle at 50% 50%, rgba(0, 212, 255, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 0% 0%, rgba(0, 255, 136, 0.02) 0%, transparent 30%) !important;
+}
+
+.fi-section {
+    background: rgba(255, 255, 255, 0.02) !important;
+    backdrop-filter: blur(8px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    border-radius: 12px !important;
+}
+
+.fi-section-header-heading {
+    text-transform: uppercase !important;
+    letter-spacing: 0.1em !important;
+    font-weight: 700 !important;
+    font-size: 14px !important;
+    color: var(--nasa-blue) !important;
+}
+
+/* Customizing Account Widget to look less "default" */
+.fi-account-widget {
+    border-left: 3px solid var(--nasa-green) !important;
+}
+
+.fi-account-widget .fi-section {
+    background: linear-gradient(135deg, rgba(0, 255, 136, 0.05) 0%, transparent 100%) !important;
+}
+
+/* Table Enhancements */
+.fi-ta-header-cell-label {
+    text-transform: uppercase !important;
+    font-size: 12px !important;
+    letter-spacing: 0.05em !important;
+}
+
+.fi-ta-record {
+    transition: background 0.2s ease !important;
+}
+
+/* NASA-Level Global Integration */
+.fi-main {
+    background-color: var(--nasa-bg) !important;
+    background-image: 
+        linear-gradient(rgba(255, 255, 255, 0.01) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.01) 1px, transparent 1px) !important;
+    background-size: 50px 50px !important;
+}
+
+.fi-section {
+    background: rgba(255, 255, 255, 0.015) !important;
+    backdrop-filter: blur(12px) !important;
+    border: 1px solid var(--nasa-border) !important;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4) !important;
+}
+
+.fi-header-heading {
+    letter-spacing: 0.15em !important;
+    text-transform: uppercase !important;
+    font-weight: 800 !important;
+    color: #fff !important;
+}
+
+/* Enhancing the Radar and Intel cards */
+.radar-table tr {
+    transition: all 0.2s ease;
+}
+
+.radar-table tr:hover td {
+    border-bottom: 1px solid var(--nasa-blue) !important;
+}
+
+.intel-card {
+    border-top: 2px solid var(--nasa-border) !important;
+    transition: border-top-color 0.4s ease;
+}
+
+.intel-card:hover {
+    border-top-color: var(--nasa-blue) !important;
+}
+
+/* Stats Card Premium Styling */
+.fi-wi-stats-overview-stat {
+    border-top: 4px solid var(--jamaica-green) !important;
+    transition: all 0.3s ease !important;
+    border-radius: 0.75rem !important;
+    overflow: hidden !important;
+    box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1) !important;
+}
+
+.fi-wi-stats-overview-stat:hover {
+    transform: translateY(-5px) !important;
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1) !important;
+}
+
+.fi-wi-stats-overview-stat:nth-child(2) {
+    border-top-color: var(--jamaica-yellow) !important;
+}
+
+.fi-wi-stats-overview-stat:nth-child(3) {
+    border-top-color: var(--jamaica-black) !important;
+}
+
+.fi-wi-stats-overview-stat:nth-child(4) {
+    border-top-color: var(--jamaica-green) !important;
+}
+
+.fi-wi-stats-overview-stat-label {
+    text-transform: uppercase !important;
+    letter-spacing: 0.05em !important;
+    font-weight: 600 !important;
+    font-size: 12px !important;
+    color: #64748b !important;
+}
+
+.fi-wi-stats-overview-stat-value {
+    font-weight: 800 !important;
+    font-size: 36px !important;
+    color: #ffffff !important;
+}
