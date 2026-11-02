@@ -38,11 +38,11 @@ jobs:
       - name: Audit locked PHP dependencies
         run: composer audit --locked --abandoned=report
 
+      - name: Prepare Laravel runtime directories
+        run: mkdir -p bootstrap/cache storage/app/import storage/framework/cache storage/framework/sessions storage/framework/testing storage/framework/views storage/logs
+
       - name: Install PHP dependencies
         run: composer install --no-interaction --prefer-dist --no-progress
-
-      - name: Prepare Laravel runtime directories
-        run: mkdir -p storage/app/import storage/framework/cache storage/framework/sessions storage/framework/testing storage/framework/views storage/logs
 
       - name: Install frontend dependencies
         run: npm ci
