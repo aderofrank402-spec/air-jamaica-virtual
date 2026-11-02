@@ -4,9 +4,11 @@ The next portfolio pass will add live-system screenshots and verified operationa
 
 ## Required screenshots
 
-### 1. Operations overview
+### 1. Operations overview — added
 
 Capture the dashboard area that shows total completed flights, flight hours, distance, pilots, or another high-level operational summary.
+
+**Published evidence:** 274 completed flights, 11 active pilots, and 273 global destinations, captured 2 November 2026.
 
 **Redact:** names, email addresses, account IDs, private notices, financial values not intended for publication.
 

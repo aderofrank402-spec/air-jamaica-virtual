@@ -26,7 +26,7 @@ Air Jamaica Virtual turns the lifecycle of a simulated airline flight into one c
 | Operations | Queues, scheduled jobs, backup tooling, activity logs, diagnostics, and environment-aware configuration |
 | Integrations | Flight planning, weather, mapping, identity providers, email transports, object storage, and flight-tracking clients |
 
-These counts describe repository structure; they are not business-activity claims. Operational totals such as flights, destinations, pilots, and fleet activity will be added only with screenshots from the live system.
+These counts describe repository structure; live operational totals are presented separately below with dated visual evidence from the production system.
 
 ## Product workflow
 
@@ -134,11 +134,14 @@ The frontend production build has been verified locally. The dependency-locked b
 - [Security policy](SECURITY.md)
 - [Changelog](CHANGELOG.md)
 
-## Evidence still to be added
+## Production evidence
 
-The repository is intentionally waiting for live-system screenshots before publishing operational totals. The next evidence pass will add:
+![Air Jamaica Virtual operations overview showing 274 completed flights, 11 active pilots, and 273 global destinations](assets/evidence/operations-overview.png)
 
-- Operations dashboard with total completed flights and hours
+*Production operations overview captured on 2 November 2026: 274 completed flights, 11 active pilots, and 273 global destinations. These operational totals are point-in-time evidence and will change as the airline operates.*
+
+Additional evidence planned for this portfolio:
+
 - Route or destinations view showing network breadth
 - Live-map or active-flight view
 - Fleet or aircraft-management view
