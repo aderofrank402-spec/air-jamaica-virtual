@@ -12,11 +12,13 @@ Capture the dashboard area that shows total completed flights, flight hours, dis
 
 **Redact:** names, email addresses, account IDs, private notices, financial values not intended for publication.
 
-### 2. Destinations or route network
+### 2. Destinations or route network — added
 
 Capture a route map, destination directory, or schedule view that visibly demonstrates network breadth.
 
 **Include if visible:** destination count, airport codes, map markers, or route totals.
+
+**Published evidence:** production airport directory with ICAO codes, IATA codes, airport names, locations, and hub classification, captured 2 November 2026.
 
 ### 3. Live operations
 
@@ -24,11 +26,13 @@ Capture the live map or active-flight status view. It is acceptable if no flight
 
 **Redact:** pilot identity and any private tracking identifiers.
 
-### 4. Fleet management
+### 4. Fleet management — added
 
 Capture the public fleet page or an administrative aircraft list showing types and operational status.
 
 **Redact:** internal notes, private maintenance remarks, or identifiers that should not be public.
+
+**Published evidence:** production fleet overview showing aircraft families, type codes, assigned hubs, and aircraft counts, captured 2 November 2026.
 
 ### 5. Pilot workflow
 

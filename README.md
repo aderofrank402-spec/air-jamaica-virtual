@@ -140,11 +140,21 @@ The frontend production build has been verified locally. The dependency-locked b
 
 *Production operations overview captured on 2 November 2026: 274 completed flights, 11 active pilots, and 273 global destinations. These operational totals are point-in-time evidence and will change as the airline operates.*
 
+### Airport network
+
+![Air Jamaica Virtual airport directory showing ICAO and IATA codes, airport names, and locations](assets/evidence/airport-directory.png)
+
+*Production airport directory captured on 2 November 2026. This view demonstrates the system's structured global airport data through real ICAO and IATA codes, airport names, locations, and hub classification.*
+
+### Fleet composition
+
+![Air Jamaica Virtual fleet overview showing aircraft families, type codes, hubs, and aircraft counts](assets/evidence/fleet-overview.png)
+
+*Production fleet overview captured on 2 November 2026. The visible inventory spans Boeing 737 and 777 variants and Airbus A310, A320, A321, A330, and A350 families, allocated across MKJP and MKJS hubs.*
+
 Additional evidence planned for this portfolio:
 
-- Route or destinations view showing network breadth
 - Live-map or active-flight view
-- Fleet or aircraft-management view
 - Pilot dashboard or logbook view
 - Administrative operations view with sensitive values removed
 
