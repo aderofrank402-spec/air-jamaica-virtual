@@ -143,7 +143,7 @@
     },
     "scripts": {
         "pre-autoload-dump": [
-            "@php -r \"foreach (glob('bootstrap/cache/*') as $f) if (is_file($f)) @unlink($f);\""
+            "@php scripts/clear_bootstrap_cache.php"
         ],
         "post-autoload-dump": [
             "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
