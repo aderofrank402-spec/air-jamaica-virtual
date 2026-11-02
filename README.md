@@ -3,6 +3,7 @@
 # Air Jamaica Virtual
 
 [![Live application](https://img.shields.io/badge/live-airjamaicavirtual.com-009B3A)](https://airjamaicavirtual.com)
+[![CI](https://github.com/aderofrank402-spec/air-jamaica-virtual/actions/workflows/ci.yml/badge.svg)](https://github.com/aderofrank402-spec/air-jamaica-virtual/actions/workflows/ci.yml)
 ![PHP 8.2+](https://img.shields.io/badge/PHP-8.2%2B-777BB4?logo=php&logoColor=white)
 ![Laravel 12](https://img.shields.io/badge/Laravel-12-FF2D20?logo=laravel&logoColor=white)
 ![Frontend build](https://img.shields.io/badge/Vite-build%20verified-646CFF?logo=vite&logoColor=white)
