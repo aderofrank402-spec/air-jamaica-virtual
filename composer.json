@@ -1,12 +1,11 @@
 {
-    "name": "phpvms/phpvms",
-    "description": "phpVMS - Virtual Airline Administration",
-    "keywords": ["phpvms", "virtual", "airlines"],
-    "license": "BSD-3-Clause",
+    "name": "air-jamaica-virtual/operations-platform",
+    "description": "Production virtual-airline operations platform for pilots, dispatch, fleet, reporting, and administration",
+    "keywords": ["virtual-airline", "flight-operations", "aviation", "laravel"],
     "type": "project",
     "minimum-stability": "dev",
     "prefer-stable": true,
-    "homepage": "http://www.phpvms.net",
+    "homepage": "https://airjamaicavirtual.com",
     "repositories": [
         {
           "type": "vcs",
@@ -133,9 +132,9 @@
         }
     },
      "extra": {
-         "installer-types": ["phpvms-module"],
+         "installer-types": ["ajv-module"],
          "installer-paths": {
-             "modules/{$name}/": ["type:phpvms-module"]
+             "modules/{$name}/": ["type:ajv-module"]
          },
          "module-dir": "modules",
          "symfony": {

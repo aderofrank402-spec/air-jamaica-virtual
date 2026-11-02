@@ -30,7 +30,7 @@ class Velocity extends Unit
         }
 
         $this->localUnit = setting('units.speed');
-        $this->internalUnit = config('phpvms.internal_units.velocity');
+        $this->internalUnit = config('ajv.internal_units.velocity');
 
         if ($value instanceof self) {
             $value->toUnit($unit);

@@ -30,7 +30,7 @@ class Temperature extends Unit
         }
 
         $this->localUnit = setting('units.temperature');
-        $this->internalUnit = config('phpvms.internal_units.temperature');
+        $this->internalUnit = config('ajv.internal_units.temperature');
 
         if ($value instanceof self) {
             $value->toUnit($unit);

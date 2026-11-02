@@ -2,7 +2,7 @@ users:
   - id: 1
     pilot_id: 1
     name: Admin User
-    email: admin@phpvms.net
+    email: admin@ajv.net
     password: admin
     api_key: testadminapikey
     airline_id: 1
@@ -23,7 +23,7 @@ users:
   - id: 2
     pilot_id: 2
     name: Test User
-    email: user@phpvms.net
+    email: user@ajv.net
     password: user
     api_key: testuserapikey
     airline_id: 1

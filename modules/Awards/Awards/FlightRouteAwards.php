@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Log;
  * This award means you can create an award for a pilot that complets a flight
  * from one airport to another.
  *
- * See: https://docs.phpvms.net/developers/awards
+ * See: https://docs.ajv.net/developers/awards
  */
 class FlightRouteAwards extends Award
 {

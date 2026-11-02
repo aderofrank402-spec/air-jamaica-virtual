@@ -1,7 +1,7 @@
 #
 #
-# Create the phpvms database if needed:
-# docker exec phpvms /usr/bin/mysql -uroot -e 'CREATE DATABASE phpvms'
+# Create the ajv database if needed:
+# docker exec ajv /usr/bin/mysql -uroot -e 'CREATE DATABASE ajv'
 SHELL := /bin/bash
 COMPOSER ?= $(shell which composer)
 
@@ -84,8 +84,8 @@ phpcs:
 
 .PHONY: replay-acars
 replay-acars:
-	#@php artisan phpvms:replay AAL10,AAL3113,BAW172,DAL988,FIN6,MSR986 --manual
-	@php artisan phpvms:replay ASH6028 --manual
+	#@php artisan ajv:replay AAL10,AAL3113,BAW172,DAL988,FIN6,MSR986 --manual
+	@php artisan ajv:replay ASH6028 --manual
 
 .PHONY: sass-watch
 sass-watch:
@@ -112,7 +112,7 @@ docker-test:
 
 .PHONY: docker-clean
 docker-clean:
-	-docker stop phpvms
-	-docker rm -rf phpvms
+	-docker stop ajv
+	-docker rm -rf ajv
 	-rm core/local.config.php
 	-rm -rf tmp/mysql

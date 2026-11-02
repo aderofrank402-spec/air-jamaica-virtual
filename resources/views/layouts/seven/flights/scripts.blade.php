@@ -2,7 +2,7 @@
     @parent
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // --- NUCLEAR DIRECT BIDDING (Independent of phpvms.js) ---
+            // --- NUCLEAR DIRECT BIDDING (Independent of ajv.js) ---
             document.querySelectorAll("button.save_flight").forEach(button => {
                 button.addEventListener('click', async function(e) {
                     e.preventDefault();

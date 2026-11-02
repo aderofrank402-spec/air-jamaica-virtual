@@ -24,7 +24,7 @@ class ConfigService extends Service
         'APP_LOCALE'          => 'en',
         'DEBUG_TOOLBAR'       => false,
         'SITE_NAME'           => '',
-        'APP_URL'             => 'http://phpvms.test',
+        'APP_URL'             => 'http://ajv.test',
         'DB_CONNECTION'       => '',
         'DB_HOST'             => '',
         'DB_PORT'             => 3306,
@@ -41,8 +41,8 @@ class ConfigService extends Service
         'MAIL_ENCRYPTION'     => '',
         'MAIL_USERNAME'       => '',
         'MAIL_PASSWORD'       => '',
-        'MAIL_FROM_NAME'      => 'phpVMS Admin',
-        'MAIL_FROM_ADDRESS'   => 'no-reply@phpvms.net',
+        'MAIL_FROM_NAME'      => 'Air Jamaica Virtual Admin',
+        'MAIL_FROM_ADDRESS'   => 'no-reply@ajv.net',
     ];
 
     /**
@@ -188,7 +188,7 @@ class ConfigService extends Service
 
         // If it's mariadb, enable the emulation for prepared statements
         // seems to be throwing a problem on 000webhost
-        // https://github.com/nabeelio/phpvms/issues/132
+        // https://github.com/nabeelio/ajv/issues/132
         /*if (strpos($version, 'mariadb') !== false) {
             Log::info('Detected MariaDB, setting DB_EMULATE_PREPARES to true');
             $opts['DB_EMULATE_PREPARES'] = true;

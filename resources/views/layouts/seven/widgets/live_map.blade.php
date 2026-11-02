@@ -584,7 +584,7 @@
         }
 
         // ── Render the map ────────────────────────────────────────────────────
-        phpvms.map.render_live_map({
+        ajv.map.render_live_map({
             center: ['{{ $center[0] }}', '{{ $center[1] }}'],
             zoom: '{{ $zoom }}',
             refresh_interval: {{ setting('acars.update_interval', 60) }},

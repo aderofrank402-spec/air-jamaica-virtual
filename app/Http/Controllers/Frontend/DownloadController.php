@@ -81,7 +81,7 @@ class DownloadController extends Controller
 
         // Check for SmartCARS module
         try {
-            Module::findOrFail('SmartCARS3phpVMS7Api');
+            Module::findOrFail('SmartCARS3AjvApi');
             // Use the official TFDi Design SmartCARS download link
             $regrouped_files['SmartCARS'] = collect([
                 new File(['id' => 'smartcars', 'name' => 'SmartCARS 3 Client', 'disk' => null, 'path' => 'https://smartcars.tfdidesign.com/central/download']),
@@ -122,7 +122,7 @@ class DownloadController extends Controller
         // See if they're trying to download the SmartCARS client
         if ($id === 'smartcars' && Auth::check()) {
             try {
-                Module::find('SmartCARS3phpVMS7Api');
+                Module::find('SmartCARS3AjvApi');
                 // Redirect to official TFDi Design SmartCARS download
                 return redirect()->to('https://smartcars.tfdidesign.com/central/download');
             } catch (ModuleNotFoundException) {
@@ -143,7 +143,7 @@ class DownloadController extends Controller
 
         // Allowed to download? If not, direct to login
         if (!$file->public && !Auth::check()) {
-            return redirect(config('phpvms.login_redirect'));
+            return redirect(config('ajv.login_redirect'));
         }
 
         $file->download_count++;

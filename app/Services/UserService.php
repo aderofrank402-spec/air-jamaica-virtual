@@ -91,8 +91,13 @@ class UserService extends Service
         $user->api_key = Utils::generateApiKey();
         $user->curr_airport_id = $user->home_airport_id;
 
-        // Always set state to PENDING, regardless of auto_accept setting
-        $user->state = $state ?? UserState::PENDING;
+        if ($state !== null) {
+            $user->state = $state;
+        } elseif (setting('pilots.auto_accept') === true) {
+            $user->state = UserState::ACTIVE;
+        } else {
+            $user->state = UserState::PENDING;
+        }
         
         $user->save();
 

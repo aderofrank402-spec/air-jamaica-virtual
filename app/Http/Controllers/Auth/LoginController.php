@@ -32,7 +32,7 @@ class LoginController extends Controller
     public function __construct(
         private readonly UserService $userSvc
     ) {
-        $this->redirectTo = config('phpvms.login_redirect');
+        $this->redirectTo = config('ajv.login_redirect');
         $this->middleware('guest', ['except' => 'logout']);
     }
 

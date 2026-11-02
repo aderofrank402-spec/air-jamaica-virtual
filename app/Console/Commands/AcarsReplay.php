@@ -12,7 +12,7 @@ use stdClass;
 
 class AcarsReplay extends Command
 {
-    protected $signature = 'phpvms:replay {files} {--manual} {--write-all} {--no-submit}';
+    protected $signature = 'ajv:replay {files} {--manual} {--write-all} {--no-submit}';
 
     protected $description = 'Replay an ACARS file';
 

@@ -255,7 +255,7 @@
 
 <h3>IT System Failures</h3>
 
-<h4>phpVMS System Outage</h4>
+<h4>Air Jamaica Virtual System Outage</h4>
 <div class="info-box">
     <div class="box-title">
         <i class="fas fa-server"></i>

@@ -51,11 +51,14 @@ final class ImporterTest extends TestCase
      */
     protected function insertFlightsScaffoldData(): array
     {
+        // Keep importer tests deterministic and independent of a remote airport provider.
+        $this->updateSetting('general.auto_airport_lookup', false);
+
         $fare_svc = app(FareService::class);
 
         $al = [
             'icao' => 'VMS',
-            'name' => 'phpVMS Airlines',
+            'name' => 'Air Jamaica Virtual Airlines',
         ];
 
         $airline = Airline::factory()->create($al);

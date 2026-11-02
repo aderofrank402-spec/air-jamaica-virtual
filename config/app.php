@@ -8,7 +8,7 @@
 use Carbon\Carbon;
 
 return [
-    'name'          => env('APP_NAME', 'phpvms'),
+    'name'          => env('APP_NAME', 'ajv'),
     'env'           => env('APP_ENV', 'dev'),
     'debug'         => env('APP_DEBUG', true),
     'url'           => env('APP_URL', ''),
@@ -25,7 +25,7 @@ return [
     // DON'T CHANGE THIS OR ELSE YOUR TIMES WILL BE MESSED UP!
     'timezone' => 'UTC',
 
-    // Is the default key cipher. Needs to be changed, otherwise phpVMS will think
+    // Is the default key cipher. Needs to be changed, otherwise Air Jamaica Virtual will think
     // that it isn't installed. Doubles as a security feature, so keys are scrambled
     'key'    => env('APP_KEY', 'base64:zdgcDqu9PM8uGWCtMxd74ZqdGJIrnw812oRMmwDF6KY='),
     'cipher' => 'AES-256-CBC',

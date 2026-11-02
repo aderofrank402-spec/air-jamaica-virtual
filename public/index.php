@@ -1,9 +1,9 @@
 <?php
 
 /**
- * phpVMS Entry Point
- * https://phpvms.net
- * https://docs.phpvms.net
+ * Air Jamaica Virtual Entry Point
+ * https://ajv.net
+ * https://docs.ajv.net
  */
 
 use Illuminate\Contracts\Http\Kernel;
@@ -19,16 +19,16 @@ if (!defined('DS')) {
  * If you move the public folder, or all the files in the public folder,
  * be sure to change this to point to the right place. View these docs:
  *
- * https://docs.phpvms.net/installation/uploading
+ * https://docs.ajv.net/installation/uploading
  */
-$path_to_phpvms_folder = __DIR__.DS.'..'.DS;
-if (file_exists($path_to_phpvms_folder.'bootstrap'.DS.'autoload.php')) {
+$path_to_ajv_folder = __DIR__.DS.'..'.DS;
+if (file_exists($path_to_ajv_folder.'bootstrap'.DS.'autoload.php')) {
     // noop
 }
 
-// Look up one more folder up (outside of the Laravel root) and in the `phpvms` subfolder
-elseif (file_exists($path_to_phpvms_folder.'phpvms'.DS.'bootstrap'.DS.'autoload.php')) {
-    $path_to_phpvms_folder = $path_to_phpvms_folder.'phpvms';
+// Look up one more folder up (outside of the Laravel root) and in the `ajv` subfolder
+elseif (file_exists($path_to_ajv_folder.'ajv'.DS.'bootstrap'.DS.'autoload.php')) {
+    $path_to_ajv_folder = $path_to_ajv_folder.'ajv';
 }
 
 // Bail out
@@ -37,8 +37,8 @@ else {
     exit;
 }
 
-require $path_to_phpvms_folder.DS.'bootstrap'.DS.'autoload.php';
-$app = require_once $path_to_phpvms_folder.DS.'bootstrap'.DS.'app.php';
+require $path_to_ajv_folder.DS.'bootstrap'.DS.'autoload.php';
+$app = require_once $path_to_ajv_folder.DS.'bootstrap'.DS.'app.php';
 
 /*
 |--------------------------------------------------------------------------
@@ -51,8 +51,8 @@ $app = require_once $path_to_phpvms_folder.DS.'bootstrap'.DS.'app.php';
 |
 */
 
-if (file_exists($path_to_phpvms_folder.DS.'storage'.DS.'framework'.DS.'maintenance.php')) {
-    require $path_to_phpvms_folder.DS.'storage'.DS.'framework'.DS.'maintenance.php';
+if (file_exists($path_to_ajv_folder.DS.'storage'.DS.'framework'.DS.'maintenance.php')) {
+    require $path_to_ajv_folder.DS.'storage'.DS.'framework'.DS.'maintenance.php';
 }
 
 $app->setPublicPath(__DIR__);

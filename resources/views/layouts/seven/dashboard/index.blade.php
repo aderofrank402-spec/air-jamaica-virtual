@@ -627,7 +627,7 @@ $stateInfo = [
                     @endif
                 </a>
 
-                @if(config('phpvms.simbrief.api_key'))
+                @if(config('ajv.simbrief.api_key'))
                 <a href="{{ route('frontend.simbrief.generate') }}" class="mc-op-item">
                     <div class="mc-op-item-icon amb"><i class="fas fa-map"></i></div>
                     <div class="mc-op-item-content">

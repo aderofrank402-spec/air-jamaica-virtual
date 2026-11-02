@@ -28,7 +28,7 @@ class Altitude extends Unit
         }
 
         $this->localUnit = setting('units.altitude');
-        $this->internalUnit = config('phpvms.internal_units.altitude');
+        $this->internalUnit = config('ajv.internal_units.altitude');
 
         if ($value instanceof self) {
             $value->toUnit($unit);

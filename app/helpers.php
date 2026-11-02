@@ -402,12 +402,12 @@ if (!function_exists('docs_link')) {
     /**
      * Return a link to the docs
      *
-     * @param  string $key Key from phpvms.config.docs
+     * @param  string $key Key from ajv.config.docs
      * @return string
      */
     function docs_link($key)
     {
-        return config('phpvms.docs.root').config('phpvms.docs.'.$key);
+        return config('ajv.docs.root').config('ajv.docs.'.$key);
     }
 }
 
@@ -420,9 +420,9 @@ if (!function_exists('check_module')) {
      */
     function check_module($module_name)
     {
-        $phpvms_module = Module::find($module_name);
+        $ajv_module = Module::find($module_name);
 
-        return filled($phpvms_module) ? $phpvms_module->isEnabled() : false;
+        return filled($ajv_module) ? $ajv_module->isEnabled() : false;
     }
 }
 

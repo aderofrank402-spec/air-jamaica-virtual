@@ -2,7 +2,7 @@
 
 /**
  * Based on https://github.com/scottlaurent/accounting
- * With modifications for phpVMS
+ * With modifications for Air Jamaica Virtual
  */
 
 namespace App\Models;

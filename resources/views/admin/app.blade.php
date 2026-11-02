@@ -32,9 +32,9 @@
   <script>
     const BASE_URL = '{{ url('/') }}';
       @if (Auth::user())
-    const PHPVMS_USER_API_KEY = "{{ Auth::user()->api_key }}";
+    const AJV_USER_API_KEY = "{{ Auth::user()->api_key }}";
       @else
-    const PHPVMS_USER_API_KEY = false;
+    const AJV_USER_API_KEY = false;
     @endif
     @yield('scripts_head')
   </script>
@@ -117,8 +117,8 @@
   $(document).ready(function () {
     initPlugins();
 
-    //let storage = getStorage('phpvms.admin');
-    const storage = new phpvms.Storage('phpvms.admin', {
+    //let storage = getStorage('ajv.admin');
+    const storage = new ajv.Storage('ajv.admin', {
       "menu": [],
     });
 

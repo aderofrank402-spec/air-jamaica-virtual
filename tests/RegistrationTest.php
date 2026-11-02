@@ -7,7 +7,7 @@ use App\Models\Airport;
 use App\Models\Enums\UserState;
 use App\Models\Invite;
 use App\Models\User;
-use App\Notifications\Messages\AdminUserRegistered;
+use App\Notifications\Messages\AdminUserRegisteredImmediate;
 use App\Services\UserService;
 use Illuminate\Auth\Events\Verified;
 use Illuminate\Support\Facades\Hash;
@@ -49,8 +49,8 @@ final class RegistrationTest extends TestCase
             event(new Verified($user));
         }
 
-        Notification::assertSentTo([$admin], AdminUserRegistered::class);
-        Notification::assertNotSentTo([$user], AdminUserRegistered::class);
+        Notification::assertSentTo([$admin], AdminUserRegisteredImmediate::class);
+        Notification::assertNotSentTo([$user], AdminUserRegisteredImmediate::class);
     }
 
     protected function getUserData(): array
@@ -60,7 +60,7 @@ final class RegistrationTest extends TestCase
 
         return [
             'name'                  => 'Test User',
-            'email'                 => 'test@phpvms.net',
+            'email'                 => 'test@ajv.net',
             'airline_id'            => $airline->id,
             'home_airport_id'       => $home->id,
             'password'              => 'secret',
@@ -77,8 +77,12 @@ final class RegistrationTest extends TestCase
         $this->get('/register')
             ->assertOk();
 
-        $this->post('/register', $this->getUserData())
-            ->assertRedirect('/dashboard');
+        $data = $this->getUserData();
+        $this->post('/register', $data)->assertOk();
+        $this->assertDatabaseHas('users', [
+            'email' => $data['email'],
+            'state' => UserState::PENDING,
+        ]);
     }
 
     public function test_access_to_registration_when_registration_disabled(): void
@@ -125,8 +129,11 @@ final class RegistrationTest extends TestCase
             'invite_token' => base64_encode($invite->token),
         ]);
 
-        $this->post('/register', $userData)
-            ->assertRedirect('/dashboard');
+        $this->post('/register', $userData)->assertOk();
+        $this->assertDatabaseHas('users', [
+            'email' => $userData['email'],
+            'state' => UserState::PENDING,
+        ]);
     }
 
     public function test_access_with_invalid_invite(): void
@@ -191,7 +198,7 @@ final class RegistrationTest extends TestCase
 
         $this->expectException(HttpException::class);
         $invite = Invite::create([
-            'email' => 'invited_email@phpvms.net',
+            'email' => 'invited_email@ajv.net',
             'token' => 'test',
         ]);
 

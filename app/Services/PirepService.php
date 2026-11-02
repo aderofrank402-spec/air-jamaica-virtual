@@ -609,7 +609,7 @@ class PirepService extends Service
         Log::info('PIREP '.$pirep->id.' state change to ACCEPTED');
 
         $fuel_remain = $pirep->block_fuel->internal() - $pirep->fuel_used->internal();
-        $fuel_on_board = Fuel::make($fuel_remain, config('phpvms.internal_units.fuel'));
+        $fuel_on_board = Fuel::make($fuel_remain, config('ajv.internal_units.fuel'));
 
         // Update the aircraft
         $pirep->aircraft->flight_time += $pirep->flight_time;

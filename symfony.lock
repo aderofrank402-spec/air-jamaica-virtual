@@ -289,7 +289,7 @@
             "tests/bootstrap.php"
         ]
     },
-    "phpvms/sample-module": {
+    "ajv/sample-module": {
         "version": "1.0.2"
     },
     "prettus/l5-repository": {

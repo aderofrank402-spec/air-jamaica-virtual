@@ -1,6 +1,6 @@
 /**
  * Before you edit these, read the documentation on how these files are compiled:
- * https://docs.phpvms.net/developers/building-assets
+ * https://docs.ajv.net/developers/building-assets
  *
  * Edits here don't take place until you compile these assets and then upload them.
  */
@@ -24,9 +24,9 @@ select2();
 window.axios = axios;
 
 /**
- * Container for phpVMS specific functions
+ * Container for Air Jamaica Virtual specific functions
  */
-window.phpvms = {
+window.ajv = {
   config,
   request,
   Storage,

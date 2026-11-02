@@ -255,7 +255,7 @@ return [
             /*
              * If this is an empty string, the name field on the webhook will be used.
              */
-            'username' => env('BACKUP_DISCORD_USERNAME', 'phpVMS Backup'),
+            'username' => env('BACKUP_DISCORD_USERNAME', 'Air Jamaica Virtual Backup'),
 
             /*
              * If this is an empty string, the avatar on the webhook will be used.

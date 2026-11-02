@@ -9,7 +9,7 @@ use League\Geotools\Exception\InvalidArgumentException;
 
 class NavdataImport extends Command
 {
-    protected $signature = 'phpvms:navdata';
+    protected $signature = 'ajv:navdata';
 
     protected $description = '';
 

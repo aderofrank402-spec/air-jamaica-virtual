@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
   <script type="text/javascript">
     document.addEventListener('DOMContentLoaded', function () {
-      phpvms.map.render_route_map({
+      ajv.map.render_route_map({
         pirep_uri: '{!! url('/api/pireps/'.$pirep->id.'/acars/geojson') !!}',
         route_points: {!! json_encode($map_features['planned_rte_points'])  !!},
         planned_route_line: {!! json_encode($map_features['planned_rte_line']) !!},

@@ -84,7 +84,7 @@ class LegacyImporterService extends Service
             'name'         => '',
             'user'         => '',
             'pass'         => 3306,
-            'table_prefix' => 'phpvms_',
+            'table_prefix' => 'ajv_',
         ], $creds);
 
         $this->kvpRepo->save($this->CREDENTIALS_KEY, $creds);

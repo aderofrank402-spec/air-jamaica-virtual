@@ -8,8 +8,8 @@ return [
         'github' => [
             'type'                 => 'github',
             'repository_vendor'    => 'nabeelio',
-            'repository_name'      => 'phpvms',
-            'repository_url'       => 'https://github.com/nabeelio/phpvms',
+            'repository_name'      => 'ajv',
+            'repository_url'       => 'https://github.com/nabeelio/ajv',
             'download_path'        => storage_path('app'),
             'private_access_token' => '',
             'use_branch'           => '',
@@ -17,7 +17,7 @@ return [
     ],
 
     'mail_to' => [
-        'address'                  => 'no-reply@phpvms.net',
+        'address'                  => 'no-reply@ajv.net',
         'name'                     => 'no name',
         'subject_update_available' => 'Update available',
         'subject_update_succeeded' => 'Update succeeded',

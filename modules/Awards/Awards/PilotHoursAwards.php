@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Log;
  * This award means you can create an award for a pilot that completes any
  * amount of flight time (In Minutes).
  *
- * See: https://docs.phpvms.net/developers/awards
+ * See: https://docs.ajv.net/developers/awards
  */
 class PilotHoursAwards extends Award
 {

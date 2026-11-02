@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="520" viewBox="0 0 1280 520" role="img" aria-labelledby="title desc">
+  <title id="title">Air Jamaica Virtual operations platform</title>
+  <desc id="desc">A green, gold, and black aviation operations banner with a route network and aircraft.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07140d"/><stop offset="1" stop-color="#10291b"/></linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0"><stop stop-color="#f5c842"/><stop offset="1" stop-color="#d99b16"/></linearGradient>
+    <radialGradient id="glow"><stop stop-color="#19c463" stop-opacity=".35"/><stop offset="1" stop-color="#19c463" stop-opacity="0"/></radialGradient>
+    <style>.title{font:700 64px 'Segoe UI',Arial,sans-serif;fill:#fff}.eyebrow{font:700 18px 'Segoe UI',Arial,sans-serif;fill:#f5c842;letter-spacing:3px}.sub{font:400 23px 'Segoe UI',Arial,sans-serif;fill:#c9d8cf}.metric{font:650 15px 'Segoe UI',Arial,sans-serif;fill:#f3f7f4}.route{fill:none;stroke:#33d17a;stroke-width:2;stroke-dasharray:7 8;opacity:.72}.node{fill:#f5c842}.grid{stroke:#6ca883;stroke-width:1;opacity:.12}</style>
+  </defs>
+  <rect width="1280" height="520" rx="22" fill="url(#bg)"/>
+  <circle cx="980" cy="250" r="330" fill="url(#glow)"/>
+  <g class="grid"><path d="M690 0v520M790 0v520M890 0v520M990 0v520M1090 0v520M1190 0v520"/><path d="M620 80h660M620 180h660M620 280h660M620 380h660M620 480h660"/></g>
+  <text x="64" y="105" class="eyebrow">VIRTUAL AIRLINE OPERATIONS</text>
+  <text x="60" y="190" class="title">AIR JAMAICA</text>
+  <text x="60" y="263" class="title">VIRTUAL</text>
+  <text x="66" y="322" class="sub">Pilots · Dispatch · Fleet · Live Operations</text>
+  <rect x="66" y="370" width="505" height="2" fill="url(#gold)"/>
+  <text x="66" y="416" class="metric">PRODUCTION LARAVEL PLATFORM  ·  AIRJAMAICAVIRTUAL.COM</text>
+  <path d="M745 367 Q850 115 1070 165 Q1165 190 1217 108" class="route"/>
+  <path d="M704 236 Q900 375 1194 330" class="route"/>
+  <path d="M810 445 Q925 260 1115 405" class="route"/>
+  <g class="node"><circle cx="745" cy="367" r="7"/><circle cx="1070" cy="165" r="7"/><circle cx="1217" cy="108" r="7"/><circle cx="704" cy="236" r="7"/><circle cx="1194" cy="330" r="7"/><circle cx="810" cy="445" r="7"/><circle cx="1115" cy="405" r="7"/></g>
+  <g transform="translate(920 235) rotate(-18)"><path d="M0 27 L92 0 L104 7 L71 30 L112 51 L101 58 L54 40 L28 59 L19 55 L31 36 L0 33 Z" fill="#fff"/><path d="M48 31L91 15" stroke="#f5c842" stroke-width="4"/></g>
+</svg>

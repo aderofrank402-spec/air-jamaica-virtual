@@ -6,13 +6,13 @@ return [
      * Shared translations.
      *
      */
-    'title'                             => 'phpVMS Installer',
+    'title'                             => 'Air Jamaica Virtual Installer',
     'next'                              => 'Next Step',
     'back'                              => 'Previous',
     'finish'                            => 'Install',
     'output'                            => 'Console Output',
-    'already_installed'                 => 'phpVMS is already installed.',
-    'install_completed'                 => 'phpVMS Installation completed successfully.',
+    'already_installed'                 => 'Air Jamaica Virtual is already installed.',
+    'install_completed'                 => 'Air Jamaica Virtual Installation completed successfully.',
     'complete_setup'                    => 'Complete Setup',
     'failed'                            => 'Failed',
     'db_connection_ok'                  => 'Connection OK',
@@ -38,9 +38,9 @@ return [
     'update'                            => 'Update',
     'migrations_not_completed'          => 'You still have :count migrations to run. Please try again...',
     'user_and_airline_setup'            => 'User & Airline Setup',
-    'legacy_importer'                   => 'phpVMS v5 Legacy Importer',
+    'legacy_importer'                   => 'Air Jamaica Virtual v5 Legacy Importer',
     'super_admin_informations'          => 'Super Admin User Informations',
     'lets_rebuild_cache'                => 'Let\'s rebuild the cache.',
     'update_completed'                  => 'Update completed successfully. You\'ll be redirected in a few seconds',
-    'update_phpvms'                     => 'Update phpVMS',
+    'update_ajv'                     => 'Update Air Jamaica Virtual',
 ];

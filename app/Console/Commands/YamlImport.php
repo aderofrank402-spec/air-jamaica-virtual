@@ -11,7 +11,7 @@ use Exception;
  */
 class YamlImport extends Command
 {
-    protected $signature = 'phpvms:yaml-import {files*}';
+    protected $signature = 'ajv:yaml-import {files*}';
 
     protected $description = 'Developer commands';
 

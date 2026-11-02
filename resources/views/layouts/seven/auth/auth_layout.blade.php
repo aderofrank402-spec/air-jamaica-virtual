@@ -880,6 +880,7 @@
         crossorigin="anonymous"></script>
     <script src="{{ public_asset('/assets/vendor/tomselect/tom-select.complete.min.js') }}"></script>
 
+    @if (isset($captcha) && $captcha['enabled'] && !empty($captcha['site_key']))
     <!-- reCAPTCHA script added directly to ensure loading -->
     <script src="https://www.google.com/recaptcha/api.js"></script>
 
@@ -918,6 +919,7 @@
             setTimeout(checkRecaptcha, 2000);
         });
     </script>
+    @endif
 </body>
 
 @yield('scripts')

@@ -13,7 +13,7 @@ return [
     /*
      * Check for if we're "installed" or not
      */
-    'installed' => env('PHPVMS_INSTALLED', false),
+    'installed' => env('AJV_INSTALLED', false),
 
     /*
      * Avatar resize settings
@@ -80,17 +80,23 @@ return [
     /*
      * Misc Settings
      */
-    'news_feed_url' => 'http://forum.phpvms.net/rss/1-announcements-feed.xml/?',
+    'news_feed_url' => env('AJV_NEWS_FEED_URL'),
 
     /*
      * URL to the latest version file
      */
-    'version_file' => 'https://api.github.com/repos/nabeelio/phpvms/releases',
+    'version_file' => env(
+        'AJV_VERSION_FILE_URL',
+        'https://api.github.com/repos/aderofrank402-spec/air-jamaica-virtual/releases'
+    ),
 
     /**
-     * The URL to download the latest phpVMS version from
+     * The URL to download the latest Air Jamaica Virtual version from
      */
-    'distrib_url' => 'http://downloads.phpvms.net/phpvms-{VERSION}.zip',
+    'distrib_url' => env(
+        'AJV_DISTRIBUTION_URL',
+        'https://github.com/aderofrank402-spec/air-jamaica-virtual/releases/download/{VERSION}/air-jamaica-virtual-{VERSION}.zip'
+    ),
 
     /**
      * The URL to download the latest TLD list
@@ -121,13 +127,13 @@ return [
      * DO NOT CHANGE THIS. This is used to map error codes to the approriate
      * RFC 7807 type, which can be used as a machine-readable error code/map
      */
-    'error_root' => 'https://phpvms.net/errors',
+    'error_root' => 'https://airjamaicavirtual.com/errors',
 
     /**
      * The links to various docs on the documentation site
      */
     'docs' => [
-        'root'             => 'https://docs.phpvms.net',
+        'root'             => 'https://airjamaicavirtual.com/docs',
         'cron'             => '/installation/cron',
         'finances'         => '/concepts/finances',
         'importing_legacy' => '/installation/importing',

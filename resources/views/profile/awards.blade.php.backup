@@ -1047,7 +1047,7 @@ function shareAchievement(platform) {
     const pilotName = "{{ Auth::user()->name }}";
     const airlineName = "Air Jamaica Virtual";
     
-    let shareText = `🏆 ${pilotName} has earned ${totalAwards} awards flying with ${airlineName}! #VirtualAviation #phpVMS`;
+    let shareText = `🏆 ${pilotName} has earned ${totalAwards} awards flying with ${airlineName}! #VirtualAviation #Air Jamaica Virtual`;
     let shareUrl = window.location.href;
     
     switch(platform) {
@@ -1290,7 +1290,7 @@ function shareAchievement(platform) {
     const pilotName = "{{ Auth::user()->name }}";
     const airlineName = "Air Jamaica Virtual";
     
-    let shareText = `🏆 ${pilotName} has earned ${totalAwards} awards flying with ${airlineName}! #VirtualAviation #phpVMS`;
+    let shareText = `🏆 ${pilotName} has earned ${totalAwards} awards flying with ${airlineName}! #VirtualAviation #Air Jamaica Virtual`;
     let shareUrl = window.location.href;
     
     switch(platform) {

@@ -45,7 +45,7 @@ class SystemPanelProvider extends PanelProvider
             ->plugins([
                 LanguageSwitcherPlugin::make(),
             ])
-            ->brandName('phpVMS')
+            ->brandName('Air Jamaica Virtual')
             ->favicon(public_asset('assets/img/favicon.png'))
             ->viteTheme('resources/css/filament/admin/theme.css')
             ->unsavedChangesAlerts()

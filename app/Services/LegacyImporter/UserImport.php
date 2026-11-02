@@ -127,7 +127,7 @@ class UserImport extends BaseImporter
         /*$state = (int) $state;
 
         // Declare array of classic states
-        $phpvms_classic_states = [
+        $ajv_classic_states = [
             'ACTIVE'   => 0,
             'INACTIVE' => 1,
             'BANNED'   => 2,
@@ -135,20 +135,20 @@ class UserImport extends BaseImporter
         ];
 
         // Decide which state they will be in accordance with v7
-        if ($state === $phpvms_classic_states['ACTIVE']) {
+        if ($state === $ajv_classic_states['ACTIVE']) {
             return UserState::ACTIVE;
         }
 
-        if ($state === $phpvms_classic_states['INACTIVE']) {
+        if ($state === $ajv_classic_states['INACTIVE']) {
             // TODO: Make an inactive state?
             return UserState::REJECTED;
         }
 
-        if ($state === $phpvms_classic_states['BANNED']) {
+        if ($state === $ajv_classic_states['BANNED']) {
             return UserState::SUSPENDED;
         }
 
-        if ($state === $phpvms_classic_states['ON_LEAVE']) {
+        if ($state === $ajv_classic_states['ON_LEAVE']) {
             return UserState::ON_LEAVE;
         }
 

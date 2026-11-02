@@ -24,7 +24,7 @@ class MassCast implements CastsAttributes
         }
 
         try {
-            return Mass::make($value, config('phpvms.internal_units.mass'));
+            return Mass::make($value, config('ajv.internal_units.mass'));
         } catch (NonNumericValue $e) {
         } catch (NonStringUnitName $e) {
             return $value;
@@ -43,7 +43,7 @@ class MassCast implements CastsAttributes
     public function set($model, string $key, $value, array $attributes)
     {
         if ($value instanceof Mass) {
-            return $value->toUnit(config('phpvms.internal_units.mass'));
+            return $value->toUnit(config('ajv.internal_units.mass'));
         }
 
         return $value;

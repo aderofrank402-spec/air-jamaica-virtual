@@ -27,7 +27,7 @@ class Mass extends Unit
         }
 
         $this->localUnit = setting('units.weight');
-        $this->internalUnit = config('phpvms.internal_units.mass');
+        $this->internalUnit = config('ajv.internal_units.mass');
 
         if ($value instanceof self) {
             $value->toUnit($unit);

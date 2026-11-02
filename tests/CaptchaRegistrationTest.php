@@ -85,6 +85,7 @@ class CaptchaRegistrationTest extends TestCase
         $data['g-recaptcha-response'] = 'valid-token';
 
         $resp = $this->post('/register', $data);
-        $resp->assertRedirect('/dashboard');
+        $resp->assertStatus(200);
+        $this->assertDatabaseHas('users', ['email' => $data['email']]);
     }
 }

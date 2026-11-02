@@ -7,7 +7,7 @@ use GuzzleHttp\Client;
 
 class TestApi extends Command
 {
-    protected $signature = 'phpvms:test-api {apikey} {url}';
+    protected $signature = 'ajv:test-api {apikey} {url}';
 
     protected Client $httpClient;
 

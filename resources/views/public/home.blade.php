@@ -1632,7 +1632,7 @@
                     virtual airline, connecting pilots and destinations across every continent.</p>
             </div>
             @php
-                // Dynamic stats from phpVMS data
+                // Dynamic stats from Air Jamaica Virtual data
                 $flightsCompleted = \App\Models\Pirep::where('state', \App\Models\Enums\PirepState::ACCEPTED)->count();
                 $activePilots = \App\Models\User::where('state', \App\Models\Enums\UserState::ACTIVE)->count();
                 $destinations = \App\Models\Airport::count();

@@ -151,7 +151,7 @@ final class MetarTest extends TestCase
     }
 
     /**
-     * https://github.com/nabeelio/phpvms/issues/1071
+     * https://github.com/nabeelio/ajv/issues/1071
      */
     public function test_metar_wind_speed_chill(): void
     {
@@ -166,7 +166,7 @@ final class MetarTest extends TestCase
     /**
      * Visibility in KM not parsed
      *
-     * https://github.com/nabeelio/phpvms/issues/680
+     * https://github.com/nabeelio/ajv/issues/680
      */
     public function test_metar5(): void
     {
@@ -206,7 +206,7 @@ final class MetarTest extends TestCase
 
     /**
      * TEMPO and trend causing issue with values being overwritten
-     * https://github.com/nabeelio/phpvms/issues/861
+     * https://github.com/nabeelio/ajv/issues/861
      */
     public function test_lfrs_call(): void
     {

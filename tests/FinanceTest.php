@@ -184,10 +184,10 @@ final class FinanceTest extends TestCase
 
     /**
      * Make sure that the API is returning the fares properly for a subfleet on a flight
-     * https://github.com/nabeelio/phpvms/issues/899
+     * https://github.com/nabeelio/ajv/issues/899
      *
      * The fares, etc for a subfleet has to be adjusted to the fleet
-     * https://github.com/nabeelio/phpvms/issues/905
+     * https://github.com/nabeelio/ajv/issues/905
      */
     public function test_flight_fares_over_api(): void
     {

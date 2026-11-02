@@ -3,7 +3,6 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-use Illuminate\Support\Facades\DB;
 
 return new class extends Migration
 {
@@ -43,8 +42,10 @@ return new class extends Migration
             }
             
             // Only add airport foreign key if airports table has icao column as a key
-            $hasIcaoIndex = DB::select("SHOW INDEXES FROM airports WHERE Column_name = 'icao'");
-            if (!empty($hasIcaoIndex)) {
+            $hasIcaoIndex = collect(Schema::getIndexes('airports'))->contains(
+                static fn (array $index): bool => in_array('icao', $index['columns'] ?? [], true)
+            );
+            if ($hasIcaoIndex) {
                 try {
                     Schema::table('notams', function (Blueprint $table) {
                         $table->foreign('icao_code')->references('icao')->on('airports')->onDelete('cascade');

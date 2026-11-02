@@ -242,7 +242,7 @@ class PirepFinanceService extends Service
             $pirep->airline->journal,
             $debit,
             $pirep,
-            'Fuel Cost ('.$fuel_cost.'/'.config('phpvms.internal_units.fuel').')',
+            'Fuel Cost ('.$fuel_cost.'/'.config('ajv.internal_units.fuel').')',
             'Fuel',
             'fuel'
         );

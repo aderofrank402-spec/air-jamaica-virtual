@@ -146,7 +146,7 @@ flight reports that have been filed. You've been warned!
             @endif
           </div>
           <div class="col-6">
-            <label for="level">@lang('flights.level') ({{config('phpvms.internal_units.altitude')}})</label>
+            <label for="level">@lang('flights.level') ({{config('ajv.internal_units.altitude')}})</label>
             @if(!empty($pirep) && $pirep->read_only)
               <p>{{ $pirep->level }}</p>
             @else

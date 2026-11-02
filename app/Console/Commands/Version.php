@@ -11,7 +11,7 @@ use Version\Extension\PreRelease;
 
 class Version extends Command
 {
-    protected $signature = 'phpvms:version {--write} {--base-only} {--write-full-version} {version?}';
+    protected $signature = 'ajv:version {--write} {--base-only} {--write-full-version} {version?}';
 
     private VersionService $versionSvc;
 

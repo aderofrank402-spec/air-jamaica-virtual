@@ -2,7 +2,7 @@
 swagger: "2.0"
 info:
   version: "7.0"
-  title: phpVMS API
+  title: Air Jamaica Virtual API
   description: All of the responses are contained in the "data" variable
 basePath: /api/v1
 schemes:

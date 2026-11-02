@@ -54,7 +54,7 @@ class Maintenance extends Page
                 ->schema([
                     Flex::make([
                         $this->updateDatabase(),
-                        $this->checkForPhpVMSUpdates(),
+                        $this->checkForAjvUpdates(),
                         $this->resyncAllSeeds(),
                         $this->flushFailedJobs(),
                     ]),
@@ -93,9 +93,9 @@ class Maintenance extends Page
         ]);
     }
 
-    public function checkForPhpVMSUpdates(): Action
+    public function checkForAjvUpdates(): Action
     {
-        return Action::make('checkForPhpVMSUpdates')
+        return Action::make('checkForAjvUpdates')
             ->label(__('filament.maintenance_check_update'))
             ->icon(Heroicon::OutlinedArrowPath)
             ->action(function () {
@@ -112,7 +112,7 @@ class Maintenance extends Page
 
                 if (!$new_version_avail) {
                     Notification::make()
-                        ->title(__('filament.maintenance_is_up_to_date', ['service' => 'phpVMS application']))
+                        ->title(__('filament.maintenance_is_up_to_date', ['service' => 'Air Jamaica Virtual application']))
                         ->success()
                         ->send();
                 } else {

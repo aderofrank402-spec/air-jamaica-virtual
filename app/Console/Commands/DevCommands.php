@@ -24,7 +24,7 @@ use Symfony\Component\Yaml\Yaml;
 
 class DevCommands extends Command
 {
-    protected $signature = 'phpvms {cmd} {param?}';
+    protected $signature = 'ajv {cmd} {param?}';
 
     protected $description = 'Developer commands';
 

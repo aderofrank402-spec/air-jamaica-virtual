@@ -13,7 +13,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
  * Look for and run any of the award classes. Don't modify this.
  * See the documentation on creating awards:
  *
- * @url http://docs.phpvms.net/customizing/awards
+ * @url http://docs.ajv.net/customizing/awards
  */
 class AwardHandler extends Listener // implements ShouldQueue
 {

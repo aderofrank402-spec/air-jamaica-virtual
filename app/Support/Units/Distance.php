@@ -32,7 +32,7 @@ class Distance extends Unit
         }
 
         $this->localUnit = setting('units.distance');
-        $this->internalUnit = config('phpvms.internal_units.distance');
+        $this->internalUnit = config('ajv.internal_units.distance');
 
         if ($value instanceof self) {
             $value->toUnit($unit);

@@ -13,7 +13,7 @@
 * the SimBrief.com login screen will result in immediate revocation of the
 * associated API key, and in serious situations, legal action at my discretion.
 *
-* ADAPTED FOR LARAVEL/PHPVMS7
+* ADAPTED FOR LARAVEL/AJV7
 * The api_dir variable has been updated to point to the Laravel route endpoint
 */
 

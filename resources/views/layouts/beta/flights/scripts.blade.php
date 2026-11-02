@@ -44,7 +44,7 @@
                             });
                         });
                     } else {
-                        phpvms.bids.removeBid(flight_id).then(() => {
+                        ajv.bids.removeBid(flight_id).then(() => {
                             console.log('successfully removed flight');
                             btn.removeClass(class_name);
                             alert('@lang('flights.bidremoved')');
@@ -61,7 +61,7 @@
                     const ac_id = $('#aircraft_select').val()
                     const flight_id = $('#aircraft_select').attr('x-id');
                     const class_name = $('#aircraft_select').attr('x-saved-class')
-                    phpvms.bids.addBid(flight_id, ac_id).then(() => {
+                    ajv.bids.addBid(flight_id, ac_id).then(() => {
                         console.log('successfully saved flight');
                         $('button.save_flight[x-id="' + flight_id + '"]').addClass(class_name);
                         alert('@lang('flights.bidadded')');
@@ -77,7 +77,7 @@
                     const flight_id = $('#aircraft_select').attr('x-id');
                     const class_name = $('#aircraft_select').attr('x-saved-class')
 
-                    phpvms.bids.addBid(flight_id).then(() => {
+                    ajv.bids.addBid(flight_id).then(() => {
                         console.log('successfully saved flight');
                         $('button.save_flight[x-id="' + flight_id + '"]').addClass(class_name);
                         alert('@lang('flights.bidadded')');
@@ -100,7 +100,7 @@
                     const flight_id = btn.attr('x-id');
 
                     if (!btn.hasClass(class_name)) {
-                        phpvms.bids.addBid(flight_id).then(() => {
+                        ajv.bids.addBid(flight_id).then(() => {
                             console.log('successfully saved flight');
                             btn.addClass(class_name)
                             alert('@lang('flights.bidadded')');
@@ -110,7 +110,7 @@
                             else alert(`Error adding bid: ${error.message}`)
                         });
                     } else {
-                        phpvms.bids.removeBid(flight_id).then(() => {
+                        ajv.bids.removeBid(flight_id).then(() => {
                             console.log('successfully removed flight');
                             btn.removeClass(class_name);
                             alert('@lang('flights.bidremoved')');

@@ -29,7 +29,7 @@ class FlightOperationsCenter extends Widget
         $bids_count = \App\Models\Bid::where('user_id', $user->id)->count();
 
         // Check SmartCARS module availability
-        $smartcars_available = class_exists('\Modules\SmartCARS3phpVMS7Api\Providers\SmartCARS3phpVMS7ApiServiceProvider');
+        $smartcars_available = class_exists('\Modules\SmartCARS3AjvApi\Providers\SmartCARS3AjvApiServiceProvider');
 
         return view('widgets.flight_operations_center', [
             'user' => $user,

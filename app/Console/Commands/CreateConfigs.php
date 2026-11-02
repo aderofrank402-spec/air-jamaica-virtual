@@ -15,7 +15,7 @@ use Symfony\Component\HttpFoundation\File\Exception\FileException;
  */
 class CreateConfigs extends Command
 {
-    protected $signature = 'phpvms:config {db_host} {db_name} {db_user} {db_pass}';
+    protected $signature = 'ajv:config {db_host} {db_name} {db_user} {db_pass}';
 
     protected $description = 'Create the config files';
 

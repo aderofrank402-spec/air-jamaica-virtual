@@ -130,6 +130,6 @@ class Updater extends Page
 
     public function getTitle(): string
     {
-        return __('installer.update_phpvms');
+        return __('installer.update_ajv');
     }
 }

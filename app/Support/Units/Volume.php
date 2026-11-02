@@ -30,7 +30,7 @@ class Volume extends Unit
         }
 
         $this->localUnit = setting('units.volume');
-        $this->internalUnit = config('phpvms.internal_units.volume');
+        $this->internalUnit = config('ajv.internal_units.volume');
 
         if ($value instanceof self) {
             $value->toUnit($unit);

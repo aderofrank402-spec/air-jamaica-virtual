@@ -10,7 +10,7 @@ use Symfony\Component\HttpFoundation\File\Exception\FileException;
 
 class EmailTest extends Command
 {
-    protected $signature = 'phpvms:email-test';
+    protected $signature = 'ajv:email-test';
 
     protected $description = 'Send a test notification to admins';
 

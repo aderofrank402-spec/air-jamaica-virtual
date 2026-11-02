@@ -13,7 +13,7 @@ use Symfony\Component\HttpFoundation\File\Exception\FileException;
  */
 class DevInstall extends Command
 {
-    protected $signature = 'phpvms:dev-install {--reset-db} {--reset-configs}';
+    protected $signature = 'ajv:dev-install {--reset-db} {--reset-configs}';
 
     protected $description = 'Run a developer install and run the sample migration';
 
@@ -85,7 +85,7 @@ class DevInstall extends Command
         $this->info('Regenerating the config files');
         $cfgSvc->createConfigFiles([
             'APP_ENV'       => 'dev',
-            'SITE_NAME'     => 'phpvms test',
+            'SITE_NAME'     => 'ajv test',
             'DB_CONNECTION' => 'sqlite',
         ]);
 

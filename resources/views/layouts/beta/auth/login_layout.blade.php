@@ -33,7 +33,7 @@
           document.write(new Date().getFullYear())
         </script>
         , powered by
-        <a href="http://www.phpvms.net" target="_blank">phpvms</a>. Now-UI by
+        <a href="http://www.ajv.net" target="_blank">ajv</a>. Now-UI by
         <a href="https://www.creative-tim.com" target="_blank">Creative Tim</a>
       </div>
     </div>

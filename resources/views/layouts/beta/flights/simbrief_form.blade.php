@@ -565,7 +565,7 @@
 </script>
 <script type="text/javascript">
   // Calculate the Scheduled Enroute Time for Simbrief API
-  // Your PHPVMS flight_time value must be from BLOCK to BLOCK
+  // Your AJV flight_time value must be from BLOCK to BLOCK
   // Including departure and arrival taxi times
   // If this value is not correctly calculated and configured
   // Simbrief CI (Cost Index) calculation will not provide realistic results

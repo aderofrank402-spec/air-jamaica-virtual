@@ -107,7 +107,7 @@ class Installer extends Page
     }
 
     /**
-     * Retrieve phpvms' requirements
+     * Retrieve ajv' requirements
      */
     private function getRequirementsData(): array
     {

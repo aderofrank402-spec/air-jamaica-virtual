@@ -6,7 +6,7 @@ return [
      * Shared translations.
      *
      */
-    'title'  => 'phpVMS Installer',
+    'title'  => 'Air Jamaica Virtual Installer',
     'next'   => 'Next Step',
     'back'   => 'Previous',
     'finish' => 'Install',
@@ -21,7 +21,7 @@ return [
      */
     'welcome' => [
         'templateTitle' => 'Welcome',
-        'title'         => 'phpVMS Installer',
+        'title'         => 'Air Jamaica Virtual Installer',
         'message'       => 'Easy Installation and Setup Wizard.',
         'next'          => 'Check Requirements',
     ],

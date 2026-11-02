@@ -24,11 +24,11 @@ class Acars extends Resource
 
         // Set these to the response units
         $distance = empty($res['distance']) ? 0 : $res['distance'];
-        $distance = Distance::make($distance, config('phpvms.internal_units.distance'));
+        $distance = Distance::make($distance, config('ajv.internal_units.distance'));
         $res['distance'] = $distance->getResponseUnits();
 
         $fuel = empty($res['fuel']) ? 0 : $res['fuel'];
-        $fuel = Fuel::make($fuel, config('phpvms.internal_units.fuel'));
+        $fuel = Fuel::make($fuel, config('ajv.internal_units.fuel'));
         $res['fuel'] = $fuel->getResponseUnits();
 
         $res['pirep'] = Pirep::make($this->whenLoaded('pirep'));

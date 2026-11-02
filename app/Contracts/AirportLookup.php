@@ -10,7 +10,7 @@ abstract class AirportLookup
      * Lookup the information for an airport. Needs to return an instance of the
      * Airport model, or an array with the properties listed in the Airport model.
      *
-     * The in-use implementation can be changed in the config/phpvms.php file, so
+     * The in-use implementation can be changed in the config/ajv.php file, so
      * different services can be used, in-case vaCentral one isn't working or there
      * is a better one available. Don't handle any caching in this layer, that happens
      * at the service layer

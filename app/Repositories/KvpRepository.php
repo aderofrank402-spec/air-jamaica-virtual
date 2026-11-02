@@ -10,7 +10,7 @@ class KvpRepository
 
     public function __construct()
     {
-        $this->valueStore = Valuestore::make(config('phpvms.kvp_storage_path'));
+        $this->valueStore = Valuestore::make(config('ajv.kvp_storage_path'));
     }
 
     /**

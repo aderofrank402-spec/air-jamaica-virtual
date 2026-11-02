@@ -1,5 +1,5 @@
 #!/bin/bash
-# Production Environment Setup Script for Air Jamaica Virtual phpVMS
+# Production Environment Setup Script for Air Jamaica Virtual Air Jamaica Virtual
 
 echo "🛫 Air Jamaica Virtual - Production Setup Script"
 echo "================================================"

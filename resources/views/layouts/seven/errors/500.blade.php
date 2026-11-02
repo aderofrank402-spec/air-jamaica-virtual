@@ -34,7 +34,7 @@
           <i class="bi bi-exclamation-triangle-fill"></i> Sharing a screenshot of this page won't help. Include detailed information instead.
         </p>
         
-        <a href="https://docs.phpvms.net/help" class="btn btn-danger">phpVMS Docs | Getting Help</a>
+        <a href="https://docs.ajv.net/help" class="btn btn-danger">Air Jamaica Virtual Docs | Getting Help</a>
         <a href="{{ route('frontend.home') }}" class="btn btn-primary">Go Home</a>
         <a href="{{ url()->previous() }}" class="btn btn-primary">Go Back</a>
         </div>

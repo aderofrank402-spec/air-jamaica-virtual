@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Artisan;
 
 class ComposerCommand extends Command
 {
-    protected $signature = 'phpvms:composer {cmd}';
+    protected $signature = 'ajv:composer {cmd}';
 
     protected $description = 'Composer related tasks';
 

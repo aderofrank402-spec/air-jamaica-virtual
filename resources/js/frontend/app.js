@@ -1,6 +1,6 @@
 /**
  * Before you edit these, read the documentation on how these files are compiled:
- * https://docs.phpvms.net/developers/building-assets
+ * https://docs.ajv.net/developers/building-assets
  *
  * Edits here don't take place until you compile these assets and then upload them.
  */
@@ -23,13 +23,13 @@ import {
   render_route_map,
 } from "../maps/index";
 
-window.phpvms = window.phpvms || {};
-window.phpvms.bids = {
+window.ajv = window.ajv || {};
+window.ajv.bids = {
   addBid,
   removeBid,
 };
 
-window.phpvms.map = {
+window.ajv.map = {
   render_airspace_map,
   render_base_map,
   render_live_map,

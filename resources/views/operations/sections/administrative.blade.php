@@ -263,7 +263,7 @@
 <h4>Core Systems</h4>
 <p>Air Jamaica Virtual operates several integrated systems:</p>
 <ul>
-    <li><strong>phpVMS:</strong> Primary airline management system</li>
+    <li><strong>Air Jamaica Virtual:</strong> Primary airline management system</li>
     <li><strong>Discord Server:</strong> Community communication platform</li>
     <li><strong>SmartCARS:</strong> ACARS client for flight tracking</li>
     <li><strong>Website Portal:</strong> Public information and pilot resources</li>
@@ -303,13 +303,13 @@
     <tbody>
         <tr>
             <td>Pilot</td>
-            <td>phpVMS, Discord</td>
+            <td>Air Jamaica Virtual, Discord</td>
             <td>None</td>
             <td>Personal data only</td>
         </tr>
         <tr>
             <td>Senior Pilot</td>
-            <td>phpVMS, Discord, Training</td>
+            <td>Air Jamaica Virtual, Discord, Training</td>
             <td>Limited</td>
             <td>Training records</td>
         </tr>

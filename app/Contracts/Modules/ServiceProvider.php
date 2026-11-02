@@ -8,7 +8,7 @@ namespace App\Contracts\Modules;
  * https://laravel.com/docs/7.x/providers
  *
  * For a sample service provider, view the sample module one:
- * https://github.com/nabeelio/phpvms-module/blob/master/Providers/SampleServiceProvider.php
+ * https://github.com/nabeelio/ajv-module/blob/master/Providers/SampleServiceProvider.php
  */
 abstract class ServiceProvider extends \Illuminate\Support\ServiceProvider
 {

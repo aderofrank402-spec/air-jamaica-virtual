@@ -7,7 +7,7 @@
 </head>
 <body>
     <div class="container mt-5">
-        <h1>phpVMS7 Widget Test</h1>
+        <h1>Air Jamaica Virtual7 Widget Test</h1>
         
         <div class="row">
             <div class="col-md-6">

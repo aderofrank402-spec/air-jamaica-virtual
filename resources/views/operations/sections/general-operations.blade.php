@@ -87,7 +87,7 @@
     <ul>
         <li><strong>Discord:</strong> Primary platform for real-time communication</li>
         <li><strong>Email:</strong> Official correspondence and notifications</li>
-        <li><strong>phpVMS:</strong> Flight reporting and operational messages</li>
+        <li><strong>Air Jamaica Virtual:</strong> Flight reporting and operational messages</li>
         <li><strong>Forums:</strong> General discussions and announcements</li>
     </ul>
 </div>

@@ -53,7 +53,7 @@ class AppServiceProvider extends ServiceProvider
                 'timeout' => 30,
                 'connect_timeout' => 10,
                 'headers' => [
-                    'User-Agent' => 'phpVMS/' . config('app.version', '7.x'),
+                    'User-Agent' => 'Air Jamaica Virtual/' . config('app.version', '7.x'),
                 ],
             ];
             

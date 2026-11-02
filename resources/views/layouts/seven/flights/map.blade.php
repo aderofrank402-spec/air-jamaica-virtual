@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
   <script type="text/javascript">
     document.addEventListener('DOMContentLoaded', function() {
-      phpvms.map.render_route_map({
+      ajv.map.render_route_map({
         route_points: {!! json_encode($map_features['route_points']) !!},
         planned_route_line: {!! json_encode($map_features['planned_route_line']) !!},
         metar_wms: {!! json_encode(config('map.metar_wms')) !!},

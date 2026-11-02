@@ -59,8 +59,8 @@ return [
     */
 
     'from' => [
-        'name'    => env('MAIL_FROM_NAME', 'phpVMS Admin'),
-        'address' => env('MAIL_FROM_ADDRESS', 'no-reply@phpvms.net'),
+        'name'    => env('MAIL_FROM_NAME', 'Air Jamaica Virtual Admin'),
+        'address' => env('MAIL_FROM_ADDRESS', 'no-reply@ajv.net'),
     ],
 
     /*

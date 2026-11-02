@@ -10,7 +10,7 @@ class TLDUpdater
 {
     public function handle(CronWeekly $event): void
     {
-        $response = Http::get(config('phpvms.tld_list_url'));
+        $response = Http::get(config('ajv.tld_list_url'));
 
         if ($response->successful()) {
             Log::info('Updating TLD list');

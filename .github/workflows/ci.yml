@@ -1,0 +1,54 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    name: PHP and frontend verification
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.3"
+          extensions: bcmath, intl, mbstring, pdo_sqlite, simplexml, zip
+          coverage: none
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+
+      - name: Validate public artifact
+        run: php scripts/validate_public_repo.php
+
+      - name: Validate Composer manifest
+        run: composer validate --no-check-publish --no-check-all
+
+      - name: Audit locked PHP dependencies
+        run: composer audit --locked --abandoned=report
+
+      - name: Install PHP dependencies
+        run: composer install --no-interaction --prefer-dist --no-progress
+
+      - name: Prepare Laravel runtime directories
+        run: mkdir -p storage/app/import storage/framework/cache storage/framework/sessions storage/framework/testing storage/framework/views storage/logs
+
+      - name: Install frontend dependencies
+        run: npm ci
+
+      - name: Build production assets
+        run: npm run build
+
+      - name: Run backend tests
+        run: php vendor/bin/phpunit --colors=always

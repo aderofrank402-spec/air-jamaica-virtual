@@ -24,7 +24,7 @@ class DistanceCast implements CastsAttributes
         }
 
         try {
-            return new Distance($value, config('phpvms.internal_units.distance'));
+            return new Distance($value, config('ajv.internal_units.distance'));
         } catch (NonNumericValue $e) {
         } catch (NonStringUnitName $e) {
             return $value;
@@ -43,7 +43,7 @@ class DistanceCast implements CastsAttributes
     public function set($model, string $key, $value, array $attributes)
     {
         if ($value instanceof Distance) {
-            return $value->toUnit(config('phpvms.internal_units.distance'));
+            return $value->toUnit(config('ajv.internal_units.distance'));
         }
 
         return $value;

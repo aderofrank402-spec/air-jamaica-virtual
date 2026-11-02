@@ -8,7 +8,7 @@
       const url = '/pireps/fares?aircraft_id=' + aircraft_id;
       console.log('aircraft select change: ', aircraft_id);
 
-      phpvms.request(url).then(response => {
+      ajv.request(url).then(response => {
         destContainer.html(response.data);
       });
     });

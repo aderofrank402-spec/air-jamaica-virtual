@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Log;
  *  $param_description (optional)
  *  public function check($parameter=null)
  *
- * See: http://docs.phpvms.net/customizing/awards
+ * See: http://docs.ajv.net/customizing/awards
  */
 abstract class Award
 {

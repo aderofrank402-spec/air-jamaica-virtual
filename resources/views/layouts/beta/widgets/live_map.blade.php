@@ -111,7 +111,7 @@ and being mindful of the rivets bindings
 @section('scripts')
   <script>
     window.addEventListener("load", function () {
-      phpvms.map.render_live_map({
+      ajv.map.render_live_map({
         center: ['{{ $center[0] }}', '{{ $center[1] }}'],
         zoom: '{{ $zoom }}',
         aircraft_icon: '{!! public_asset('/assets/img/acars/aircraft.png') !!}',

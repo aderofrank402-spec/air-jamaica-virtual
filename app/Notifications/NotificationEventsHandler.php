@@ -68,23 +68,20 @@ class NotificationEventsHandler extends Listener
      */
     protected function notifyAdmins($notification)
     {
-        // Always use the support email for admin notifications
-        $admin_email = 'support@airjamaicavirtual.com';
+        $adminUsers = User::whereHas('roles', static function ($query): void {
+            $query->where('name', 'super_admin');
+        })->get();
 
-        try {
-            // Create a temporary user object for the admin email
-            $admin_user = new User();
-            $admin_user->email = $admin_email;
-            $admin_user->name = 'Air Jamaica Virtual Admin';
-            
-            // Send notification to admin email
-            $admin_user->notify($notification);
-            
-            Log::info('Admin notification sent to: ' . $admin_email);
-            
-        } catch (Exception $e) {
-            Log::emergency('Error emailing admin (' . $admin_email . '). Error=' . $e->getMessage());
-            Log::emergency('Email error stack trace', ['trace' => $e->getTraceAsString()]);
+        foreach ($adminUsers as $user) {
+            if (empty($user->email)) {
+                continue;
+            }
+
+            try {
+                Notification::send([$user], $notification);
+            } catch (Exception $e) {
+                Log::emergency('Error emailing admin ('.$user->email.'). Error='.$e->getMessage());
+            }
         }
     }
 

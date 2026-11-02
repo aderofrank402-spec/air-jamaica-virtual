@@ -34,7 +34,7 @@ abstract class AbstractHttpException extends SymfonyHttpException implements Htt
     {
         $response = [];
 
-        $response['type'] = config('phpvms.error_root').'/'.$this->getErrorType();
+        $response['type'] = config('ajv.error_root').'/'.$this->getErrorType();
         $response['title'] = $this->getMessage();
         $response['details'] = $this->getErrorDetails();
         $response['status'] = $this->getStatusCode();

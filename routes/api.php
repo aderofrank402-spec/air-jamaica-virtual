@@ -82,6 +82,7 @@ Route::group(['middleware' => ['api.auth']], function () {
 
     Route::get('pireps/{pirep_id}/comments', [PirepController::class, 'comments_get']);
 
+    Route::get('pireps/{pirep_id}/acars', [AcarsController::class, 'acars_get']);
     Route::get('pireps/{pirep_id}/acars/position', [AcarsController::class, 'acars_get']);
     Route::post('pireps/{pirep_id}/acars/position', [AcarsController::class, 'acars_store']);
     Route::post('pireps/{pirep_id}/acars/positions', [AcarsController::class, 'acars_store']);
@@ -93,6 +94,7 @@ Route::group(['middleware' => ['api.auth']], function () {
 
     // This is the info of the user whose token is in use
     Route::get('user', [UserController::class, 'index']);
+    Route::get('user/{id}', [UserController::class, 'get']);
     Route::get('user/fleet', [UserController::class, 'fleet']);
     Route::get('user/pireps', [UserController::class, 'pireps']);
     Route::get('user/financial-data', [UserController::class, 'financialData']);

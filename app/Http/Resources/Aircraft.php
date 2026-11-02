@@ -20,35 +20,35 @@ class Aircraft extends Resource
         if (!array_key_exists('dow', $res)) {
             $res['dow'] = 0;
         }
-        $dow = Mass::make($res['dow'], config('phpvms.internal_units.mass'));
+        $dow = Mass::make($res['dow'], config('ajv.internal_units.mass'));
         $res['dow'] = $dow->getResponseUnits();
 
         // Maximum Zero Fuel Weight
         if (!array_key_exists('zfw', $res)) {
             $res['zfw'] = 0;
         }
-        $zfw = Mass::make($res['zfw'], config('phpvms.internal_units.mass'));
+        $zfw = Mass::make($res['zfw'], config('ajv.internal_units.mass'));
         $res['zfw'] = $zfw->getResponseUnits();
 
         // Maximum TakeOff Weight
         if (!array_key_exists('mtow', $res)) {
             $res['mtow'] = 0;
         }
-        $mtow = Mass::make($res['mtow'], config('phpvms.internal_units.mass'));
+        $mtow = Mass::make($res['mtow'], config('ajv.internal_units.mass'));
         $res['mtow'] = $mtow->getResponseUnits();
 
         // Maximum Landing Weight
         if (!array_key_exists('mlw', $res)) {
             $res['mlw'] = 0;
         }
-        $mlw = Mass::make($res['mlw'], config('phpvms.internal_units.mass'));
+        $mlw = Mass::make($res['mlw'], config('ajv.internal_units.mass'));
         $res['mlw'] = $mlw->getResponseUnits();
 
         // Fuel On Board
         if (!array_key_exists('fuel_onboard', $res)) {
             $res['fuel_onboard'] = 0;
         }
-        $fuel_onboard = Fuel::make($res['fuel_onboard'], config('phpvms.internal_units.fuel'));
+        $fuel_onboard = Fuel::make($res['fuel_onboard'], config('ajv.internal_units.fuel'));
         $res['fuel_onboard'] = $fuel_onboard->getResponseUnits();
 
         return $res;

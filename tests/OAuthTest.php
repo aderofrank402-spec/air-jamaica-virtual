@@ -39,7 +39,7 @@ final class OAuthTest extends TestCase
             ->allows([
                 'getId'     => 123456789,
                 'getName'   => 'OAuth user',
-                'getEmail'  => 'oauth.user@phpvms.net',
+                'getEmail'  => 'oauth.user@ajv.net',
                 'getAvatar' => 'https://en.gravatar.com/userimage/12856995/aa6c0527a723abfd5fb9e246f0ff8af4.png',
             ]);
 
@@ -61,7 +61,7 @@ final class OAuthTest extends TestCase
     {
         $user = User::factory()->create([
             'name'  => 'OAuth user',
-            'email' => 'oauth.user@phpvms.net',
+            'email' => 'oauth.user@ajv.net',
         ]);
         Auth::login($user);
 
@@ -90,7 +90,7 @@ final class OAuthTest extends TestCase
     {
         $user = User::factory()->create([
             'name'  => 'OAuth user',
-            'email' => 'oauth.user@phpvms.net',
+            'email' => 'oauth.user@ajv.net',
         ]);
 
         foreach ($this->drivers as $driver) {
@@ -121,7 +121,7 @@ final class OAuthTest extends TestCase
     {
         $user = User::factory()->create([
             'name'  => 'OAuth user',
-            'email' => 'oauth.user@phpvms.net',
+            'email' => 'oauth.user@ajv.net',
         ]);
 
         foreach ($this->drivers as $driver) {
@@ -162,7 +162,7 @@ final class OAuthTest extends TestCase
     {
         $user = User::factory()->create([
             'name'  => 'OAuth user',
-            'email' => 'oauth.user@phpvms.net',
+            'email' => 'oauth.user@ajv.net',
             'state' => UserState::PENDING,
         ]);
 
@@ -196,7 +196,7 @@ final class OAuthTest extends TestCase
     {
         $user = User::factory()->create([
             'name'  => 'OAuth user',
-            'email' => 'oauth.user@phpvms.net',
+            'email' => 'oauth.user@ajv.net',
         ]);
 
         foreach ($this->drivers as $driver) {
@@ -253,7 +253,7 @@ final class OAuthTest extends TestCase
     {
         $user = User::factory()->create([
             'name'  => 'OAuth user',
-            'email' => 'oauth.user@phpvms.net',
+            'email' => 'oauth.user@ajv.net',
         ]);
 
         foreach ($this->drivers as $driver) {

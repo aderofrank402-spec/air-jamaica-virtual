@@ -60,11 +60,11 @@
     <div class="container">
       <div class="copyright">
         {{--
-        This "powered by phpVMS" must be kept visible. as-per the the license
+        This "powered by Air Jamaica Virtual" must be kept visible. as-per the the license
         If you want to remove the attribution, a license can be purchased
-        https://docs.phpvms.net/#license
+        https://docs.ajv.net/#license
         --}}
-        powered by <a href="http://www.phpvms.net" target="_blank">phpvms</a>
+        powered by <a href="http://www.ajv.net" target="_blank">ajv</a>
       </div>
     </div>
   </footer>

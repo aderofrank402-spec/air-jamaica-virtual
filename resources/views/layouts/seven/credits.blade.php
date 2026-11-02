@@ -1,17 +1,17 @@
 @extends('app')
-@section('title', 'phpVMS v7 Credits')
+@section('title', 'Air Jamaica Virtual v7 Credits')
 @section('content')
   <div class="row row-cols-2">
     <div class="col-sm-5">
       <div class="card">
-        <div class="card-header bg-primary text-white">PHPVMS v7</div>
+        <div class="card-header bg-primary text-white">AJV v7</div>
         <div class="card-body p-1">
           <img src="{{ public_asset('/assets/img/logo_blue_bg.svg') }}" width="100%" alt=""/>
           <p class="description">Open-Source Virtual Airline Management</p>
         </div>
         <div class="card-footer text-start p-1">
-          <a href="https://docs.phpvms.net" target="_blank" class="btn btn-sm btn-primary">Documents & Guides</a>
-          <a href="https://docs.phpvms.net/#license" target="_blank" class="btn btn-sm btn-primary">License</a>
+          <a href="https://docs.ajv.net" target="_blank" class="btn btn-sm btn-primary">Documents & Guides</a>
+          <a href="https://docs.ajv.net/#license" target="_blank" class="btn btn-sm btn-primary">License</a>
         </div>
       </div>
     </div>

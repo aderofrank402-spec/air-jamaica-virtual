@@ -8,7 +8,7 @@ use Illuminate\Validation\ValidationException;
 
 class ImportCsv extends Command
 {
-    protected $signature = 'phpvms:csv-import {type} {file}';
+    protected $signature = 'ajv:csv-import {type} {file}';
 
     protected $description = 'Import from a CSV file';
 

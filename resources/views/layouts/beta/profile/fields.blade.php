@@ -120,8 +120,8 @@
             <input type="file" name="avatar" id="avatar" />
           </div>
           <p class="small">{{ __('profile.avatarresize', [
-                        'width' => config('phpvms.avatar.width'),
-                        'height' => config('phpvms.avatar.height')]) }}
+                        'width' => config('ajv.avatar.width'),
+                        'height' => config('ajv.avatar.height')]) }}
           </p>
           @if ($errors->has('avatar'))
             <p class="text-danger">{{ $errors->first('avatar') }}</p>

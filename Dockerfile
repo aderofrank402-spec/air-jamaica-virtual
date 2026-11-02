@@ -1,8 +1,8 @@
-# This Dockerfile is used to create the base phpVMS image for Docker in production.
+# This Dockerfile is used to create the base Air Jamaica Virtual image for Docker in production.
 # It is based on https://serversideup.net/open-source/docker-php/.
 FROM composer:latest AS vendor
 
-LABEL org.opencontainers.image.description="The official phpVMS image"
+LABEL org.opencontainers.image.description="The official Air Jamaica Virtual image"
 
 COPY composer.json composer.json
 COPY composer.lock composer.lock

@@ -11,8 +11,8 @@ use App\Services\ImportExport\FareExporter;
 use App\Services\ImportExport\FlightExporter;
 use App\Services\ImportExport\SubfleetExporter;
 use Illuminate\Support\Collection;
+use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Log;
-use Illuminate\Support\Facades\Storage;
 use League\Csv\CannotInsertRecord;
 use League\Csv\CharsetConverter;
 use League\Csv\Writer;
@@ -40,9 +40,9 @@ class ExportService extends Service
     {
         $filename = 'export_'.$exporter->assetType.'.csv';
 
-        // Create the directory - makes it inside of storage/app
-        Storage::makeDirectory('import');
-        $path = storage_path('/app/import/export_'.$filename.'.csv');
+        $directory = storage_path('app/import');
+        File::ensureDirectoryExists($directory);
+        $path = $directory.DIRECTORY_SEPARATOR.$filename;
 
         Log::info('Exporting "'.$exporter->assetType.'" to '.$path);
 

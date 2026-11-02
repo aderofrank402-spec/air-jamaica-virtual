@@ -17,7 +17,7 @@ class BindServiceProviders extends ServiceProvider
          */
         $this->app->bind(
             Metar::class,
-            config('phpvms.metar_lookup')
+            config('ajv.metar_lookup')
         );
 
         /*
@@ -25,7 +25,7 @@ class BindServiceProviders extends ServiceProvider
          */
         $this->app->bind(
             AirportLookup::class,
-            config('phpvms.airport_lookup')
+            config('ajv.airport_lookup')
         );
 
         $this->app->bind(

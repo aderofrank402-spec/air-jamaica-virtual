@@ -145,8 +145,8 @@
         <div class="form-text enhanced-help-text">
             <i class="fas fa-info-circle me-1 text-primary"></i>
             <strong>{{ __('profile.avatarresize', [
-                'width' => config('phpvms.avatar.width', 200),
-                'height' => config('phpvms.avatar.height', 200),
+                'width' => config('ajv.avatar.width', 200),
+                'height' => config('ajv.avatar.height', 200),
             ]) }}</strong>
             <br>
             <small class="text-muted">Supported formats: JPEG, PNG, GIF • Max size: {{ ini_get('upload_max_filesize') }}</small>

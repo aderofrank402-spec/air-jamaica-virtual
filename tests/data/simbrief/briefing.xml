@@ -4278,7 +4278,7 @@ NIL
       <link>OMAAOMDB_XP9_1584226092.fms</link>
     </file>
     <file>
-      <name>phpVMS ACARS</name>
+      <name>Air Jamaica Virtual ACARS</name>
       <link>MKJPMWCR_VMS_1585313544.xml</link>
     </file>
   </files>
@@ -4465,7 +4465,7 @@ NIL
       <link>OMAAOMDB_XP9_1584226092.fms</link>
     </xp9>
     <vms>
-      <name>phpVMS ACARS</name>
+      <name>Air Jamaica Virtual ACARS</name>
       <link>MKJPMWCR_VMS_1585313544.xml</link>
     </vms>
   </fms_downloads>

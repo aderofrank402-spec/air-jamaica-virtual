@@ -69,7 +69,7 @@ class VersionService extends Service
         $releases = [];
 
         try {
-            $releases = $this->httpClient->get(config('phpvms.version_file'), [
+            $releases = $this->httpClient->get(config('ajv.version_file'), [
                 'headers' => [
                     'Accept' => 'application/json',
                 ],

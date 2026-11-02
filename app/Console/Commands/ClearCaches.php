@@ -7,7 +7,7 @@ use Nwidart\Modules\Facades\Module;
 
 class ClearCaches extends Command
 {
-    protected $signature = 'phpvms:caches';
+    protected $signature = 'ajv:caches';
 
     protected $description = 'Clear all caches';
 

@@ -3,7 +3,7 @@ airlines:
   - id: 1
     icao: VMS
     iata: VM
-    name: phpvms airlines
+    name: ajv airlines
     active: 1
     created_at: now
     updated_at: now
@@ -11,7 +11,7 @@ airlines:
 users:
   - id: 1
     name: Admin User
-    email: admin@phpvms.net
+    email: admin@ajv.net
     password: admin
     api_key: testadminapikey
     airline_id: 1

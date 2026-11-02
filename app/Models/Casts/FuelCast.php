@@ -24,7 +24,7 @@ class FuelCast implements CastsAttributes
         }
 
         try {
-            return Fuel::make($value, config('phpvms.internal_units.fuel'));
+            return Fuel::make($value, config('ajv.internal_units.fuel'));
         } catch (NonNumericValue $e) {
         } catch (NonStringUnitName $e) {
             return $value;
@@ -43,7 +43,7 @@ class FuelCast implements CastsAttributes
     public function set($model, string $key, $value, array $attributes)
     {
         if ($value instanceof Fuel) {
-            return $value->toUnit(config('phpvms.internal_units.fuel'));
+            return $value->toUnit(config('ajv.internal_units.fuel'));
         }
 
         return $value;

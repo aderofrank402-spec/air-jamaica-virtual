@@ -9,9 +9,9 @@ use Illuminate\Support\Facades\Log;
 
 class ImportFromClassicCommand extends Command
 {
-    protected $signature = 'phpvms:importer {db_host} {db_name} {db_user} {db_pass?} {table_prefix=phpvms_}';
+    protected $signature = 'ajv:importer {db_host} {db_name} {db_user} {db_pass?} {table_prefix=ajv_}';
 
-    protected $description = 'Import from an older version of phpVMS';
+    protected $description = 'Import from an older version of Air Jamaica Virtual';
 
     /**
      * Run dev related commands

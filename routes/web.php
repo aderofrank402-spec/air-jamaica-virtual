@@ -26,7 +26,7 @@ use Illuminate\Support\Facades\Route;
 Route::group([
     'prefix'     => '',
     'as'         => 'frontend.',
-    'middleware' => (config('phpvms.registration.email_verification', false) ? ['auth', 'verified'] : ['auth']),
+    'middleware' => (config('ajv.registration.email_verification', false) ? ['auth', 'verified'] : ['auth']),
 ], function () {
     // Custom dashboard routes for dedicated pages
     Route::get('dashboard/notams', [DashboardController::class, 'notams'])->name('dashboard.notams');

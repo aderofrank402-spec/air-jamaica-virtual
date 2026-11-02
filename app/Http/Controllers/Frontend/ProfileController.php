@@ -304,8 +304,8 @@ class ProfileController extends Controller
                 }
 
                 // Create the avatar, resizing it and keeping the aspect ratio.
-                $w = config('phpvms.avatar.width', 200);
-                $h = config('phpvms.avatar.height', 200);
+                $w = config('ajv.avatar.width', 200);
+                $h = config('ajv.avatar.height', 200);
 
                 $canvas = Image::canvas($w, $h);
                 $image = Image::make($avatar)->resize($w, $h, static function ($constraint) {

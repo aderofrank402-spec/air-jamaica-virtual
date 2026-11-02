@@ -46,10 +46,10 @@ class SimBriefService extends Service
         ?string $sb_user_id = null,
         ?string $sb_static_id = null
     ) {
-        $uri = str_replace('{id}', $ofp_id, config('phpvms.simbrief_url'));
+        $uri = str_replace('{id}', $ofp_id, config('ajv.simbrief_url'));
 
         if ($sb_user_id && $sb_static_id) {
-            // $uri = str_replace('{sb_user_id}', $sb_user_id, config('phpvms.simbrief_update_url'));
+            // $uri = str_replace('{sb_user_id}', $sb_user_id, config('ajv.simbrief_update_url'));
             // $uri = str_replace('{sb_static_id}', $sb_static_id, $uri);
             $uri = 'https://www.simbrief.com/api/xml.fetcher.php?userid='.$sb_user_id.'&static_id='.$sb_static_id;
         }
@@ -219,7 +219,7 @@ class SimBriefService extends Service
      */
     public function getAircraftAndAirframes()
     {
-        $url = config('phpvms.simbrief_airframes_url');
+        $url = config('ajv.simbrief_airframes_url');
         $sbdata = Http::get($url);
 
         if ($sbdata->ok()) {
@@ -266,7 +266,7 @@ class SimBriefService extends Service
      */
     public function GetBriefingLayouts()
     {
-        $url = config('phpvms.simbrief_layouts_url');
+        $url = config('ajv.simbrief_layouts_url');
         $sbdata = Http::get($url);
 
         if ($sbdata->ok()) {

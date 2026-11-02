@@ -17,7 +17,7 @@ class NotamSeeder extends Seeder
     {
         // Get sample airports
         $airports = Airport::take(5)->get();
-        $admin = User::where('email', 'admin@phpvms.net')->first();
+        $admin = User::where('email', 'admin@ajv.net')->first();
         
         if ($airports->isEmpty()) {
             $this->command->warn('No airports found. Please seed airports first.');

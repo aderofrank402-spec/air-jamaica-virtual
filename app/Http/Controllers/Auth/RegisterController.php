@@ -22,6 +22,7 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Notification;
 use Illuminate\Support\Facades\Validator as ValidatorFacade;
@@ -145,76 +146,28 @@ class RegisterController extends Controller
                         return $fail(__('validation.custom.g-recaptcha-response.required') ?? 'Captcha is required.');
                     }
                     try {
-                        // Create a custom HTTP client with more flexible settings
-                        $client = new \GuzzleHttp\Client([
-                            'timeout' => 10,
-                            'connect_timeout' => 10,
-                            'verify' => true, // Try true first
-                            'http_errors' => false,
-                        ]);
-                        
-                        $response = $client->post('https://www.google.com/recaptcha/api/siteverify', [
-                            'form_params' => [
+                        $response = Http::asForm()->timeout(10)->post(
+                            'https://www.google.com/recaptcha/api/siteverify',
+                            [
                                 'secret'   => $captchaSecretKey,
                                 'response' => $value,
                                 'remoteip' => request()->ip(),
-                            ],
-                        ]);
-                        
-                        $result = json_decode((string)$response->getBody(), true);
-                        
-                        if (!$result || !isset($result['success'])) {
-                            Log::error('Captcha response parsing error', ['response' => (string)$response->getBody()]);
+                            ]
+                        );
+                        $result = $response->json();
+
+                        if (!$response->successful() || !is_array($result) || !array_key_exists('success', $result)) {
+                            Log::error('Captcha response error', ['status' => $response->status()]);
                             return $fail('Could not verify captcha. Please try again.');
                         }
-                        
+
                         if ($result['success'] !== true) {
-                            $codes = $result['error-codes'] ?? [];
-                            Log::error('Captcha failed', ['google_response' => $result]);
-                            if (config('app.debug') && !empty($codes)) {
-                                return $fail('Captcha failed: '.implode(', ', (array) $codes));
-                            }
-                            $fail('Captcha verification failed, please try again.');
+                            Log::warning('Captcha verification rejected', ['error_codes' => $result['error-codes'] ?? []]);
+                            return $fail('Captcha verification failed, please try again.');
                         }
-                    } catch (\Exception $e) {
-                        Log::error('Captcha HTTP error', ['error' => $e->getMessage(), 'trace' => $e->getTraceAsString()]);
-                        
-                        // Try again with SSL verification disabled if that might be the issue
-                        try {
-                            $client = new \GuzzleHttp\Client([
-                                'timeout' => 10,
-                                'connect_timeout' => 10,
-                                'verify' => false, // Disable SSL verification as fallback
-                                'http_errors' => false,
-                            ]);
-                            
-                            $response = $client->post('https://www.google.com/recaptcha/api/siteverify', [
-                                'form_params' => [
-                                    'secret'   => $captchaSecretKey,
-                                    'response' => $value,
-                                    'remoteip' => request()->ip(),
-                                ],
-                            ]);
-                            
-                            $result = json_decode((string)$response->getBody(), true);
-                            
-                            if (!$result || !isset($result['success'])) {
-                                Log::error('Captcha response parsing error (fallback)', ['response' => (string)$response->getBody()]);
-                                return $fail('Could not verify captcha. Please try again.');
-                            }
-                            
-                            if ($result['success'] !== true) {
-                                Log::error('Captcha failed (fallback)', ['google_response' => $result]);
-                                return $fail('Captcha verification failed, please try again.');
-                            }
-                            
-                            // If we got here, the fallback worked
-                            Log::info('Captcha verification succeeded using fallback method');
-                            return;
-                        } catch (\Exception $e2) {
-                            Log::error('Captcha HTTP error (fallback attempt)', ['error' => $e2->getMessage()]);
-                            return $fail('Could not connect to verification service. Please try again later.');
-                        }
+                    } catch (\Throwable $e) {
+                        Log::error('Captcha verification unavailable', ['error' => $e->getMessage()]);
+                        return $fail('Could not connect to verification service. Please try again later.');
                     }
                 },
             ];

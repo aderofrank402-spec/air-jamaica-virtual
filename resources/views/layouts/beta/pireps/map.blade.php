@@ -9,7 +9,7 @@
 @section('scripts')
   <script type="text/javascript">
   window.addEventListener("load", function () {
-    phpvms.map.render_route_map({
+    ajv.map.render_route_map({
       pirep_uri: '{!! url('/api/pireps/'.$pirep->id.'/acars/geojson') !!}',
       route_points: {!! json_encode($map_features['planned_rte_points'])  !!},
       planned_route_line: {!! json_encode($map_features['planned_rte_line']) !!},

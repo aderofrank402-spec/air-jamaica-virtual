@@ -21,7 +21,7 @@
         <div class="row">
             <div class="col-12 text-center mb-4">
                 <h1><i class="fas fa-plane me-3"></i>Enhanced Dashboard Widgets Test</h1>
-                <p class="text-muted">Testing the new widgets created for the enhanced phpVMS7 dashboard</p>
+                <p class="text-muted">Testing the new widgets created for the enhanced Air Jamaica Virtual7 dashboard</p>
             </div>
         </div>
 

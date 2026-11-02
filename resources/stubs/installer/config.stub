@@ -21,8 +21,8 @@ return [
         'debug_toolbar' => false,
     ],
 
-    // Overrides config/phpvms.php
-    'phpvms' => [
+    // Overrides config/ajv.php
+    'ajv' => [
 
     ],
 
@@ -100,8 +100,8 @@ return [
             ],
         ],
         'from' => [
-            'name' => 'phpVMS No-Reply',
-            'address' => 'no-reply@phpvms.net',
+            'name' => 'Air Jamaica Virtual No-Reply',
+            'address' => 'no-reply@ajv.net',
         ],
     ],
 

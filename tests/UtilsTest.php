@@ -151,21 +151,21 @@ final class UtilsTest extends TestCase
     public function test_get_domain(): void
     {
         $tests = [
-            'http://phpvms.net',
-            'https://phpvms.net',
-            'https://phpvms.net/',
-            'phpvms.net',
-            'https://phpvms.net/index.php',
-            'https://demo.phpvms.net',
-            'https://demo.phpvms.net/file/index.php',
+            'http://ajv.net',
+            'https://ajv.net',
+            'https://ajv.net/',
+            'ajv.net',
+            'https://ajv.net/index.php',
+            'https://demo.ajv.net',
+            'https://demo.ajv.net/file/index.php',
         ];
 
         foreach ($tests as $case) {
-            $this->assertEquals('phpvms.net', Utils::getRootDomain($case));
+            $this->assertEquals('ajv.net', Utils::getRootDomain($case));
         }
 
-        $this->assertEquals('phpvms.co.uk', Utils::getRootDomain('http://phpvms.co.uk'));
-        $this->assertEquals('phpvms.co.uk', Utils::getRootDomain('http://www.phpvms.co.uk'));
+        $this->assertEquals('ajv.co.uk', Utils::getRootDomain('http://ajv.co.uk'));
+        $this->assertEquals('ajv.co.uk', Utils::getRootDomain('http://www.ajv.co.uk'));
         $this->assertEquals('127.0.0.1', Utils::getRootDomain('http://127.0.0.1'));
         $this->assertEquals('localhost', Utils::getRootDomain('http://localhost'));
     }

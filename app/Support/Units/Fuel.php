@@ -27,7 +27,7 @@ class Fuel extends Unit
         }
 
         $this->localUnit = setting('units.fuel');
-        $this->internalUnit = config('phpvms.internal_units.fuel');
+        $this->internalUnit = config('ajv.internal_units.fuel');
 
         if ($value instanceof self) {
             $value->toUnit($unit);
